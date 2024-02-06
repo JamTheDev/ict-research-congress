@@ -2,4 +2,6 @@
 	import { Button } from '$lib/components/ui/button';
 </script>
 
-<Button>Click me</Button>
+<form action="?/insert" method="post">
+	<Button type="submit">Click me</Button>
+</form>

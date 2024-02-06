@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var postgres_js_1 = require("drizzle-orm/postgres-js");
+var migrator_1 = require("drizzle-orm/postgres-js/migrator");
+var postgres_1 = require("postgres");
+var private_1 = require("$env/static/private");
+var migrationClient = (0, postgres_1.default)(private_1.DATABASE_URL, { max: 1 });
+var db = (0, postgres_js_1.drizzle)(migrationClient);
+await (0, migrator_1.migrate)(db, { migrationsFolder: 'drizzle' });
+await migrationClient.end();
