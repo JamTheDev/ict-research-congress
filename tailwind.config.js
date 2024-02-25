@@ -4,7 +4,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 const config = {
 	darkMode: ["class"],
 	content: ["./src/**/*.{html,js,svelte,ts}"],
-  safelist: ["dark"],
+	safelist: ["dark"],
 	theme: {
 		container: {
 			center: true,
@@ -13,7 +13,11 @@ const config = {
 				"2xl": "1400px"
 			}
 		},
+
 		extend: {
+			spacing: {
+				"limit": "1250px"
+			},
 			colors: {
 				border: "hsl(var(--border) / <alpha-value>)",
 				input: "hsl(var(--input) / <alpha-value>)",
