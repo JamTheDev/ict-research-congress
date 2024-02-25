@@ -1,11 +1,32 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
+	import { hero, logo1 } from '$lib/assets/images';
+	import { Button, buttonVariants } from '$lib/components/ui/button';
 </script>
 
-<section class="py-20 flex justify-center items-center px-[5%] flex-col">
-	<div class="bg-muted w-2/3 h-80">This is the banner</div>
-	<p>Some text here</p>
-	<Button class="w-fit">Register</Button>
+<section
+	class={`h-[100svh] py-20 flex justify-center items-center px-[5%] flex-col relative`}
+	id="hero"
+>
+	<!-- <img src={hero} class="absolute top-0 left-0 object-cover w-full h-full z-0" alt="hero" /> -->
+	<!-- <div class="absolute top-0 left-0 object-cover w-full h-full bg-primary/50 z-[1]"></div> -->
+
+	<img src={logo1} alt="ICT Research Congress" />
+
+	<div class="px-10 py-5 bg-primary rounded-3xl mt-5">
+		<p class="uppercase font-semibold text-5xl text-primary-foreground">
+			Reformation of Computing Knowledge:
+		</p>
+		<p class="uppercase text-4xl text-primary-foreground">
+			Crafting Research Through Cutting-edge Technology
+		</p>
+	</div>
+
+	<a
+		href="/call-for-papers"
+		class="uppercase rounded-full text-primary-foreground text-2xl h-auto bg-primary px-5 py-2 mt-10"
+	>
+		Call for Papers
+	</a>
 </section>
 
 <section class="py-20 px-[5%]">
