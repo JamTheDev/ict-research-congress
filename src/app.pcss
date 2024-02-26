@@ -89,3 +89,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .text-gradient-primary {
+    @apply bg-gradient-to-b from-primary to-secondary bg-clip-text
+  }
+}
