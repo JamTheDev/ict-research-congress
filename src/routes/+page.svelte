@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { ComputerTwo, hero, logo1 } from '$lib/assets/images';
+	import { computer2, hero, logo1 } from '$lib/assets/images';
+	import { CallForPapers, Footer } from '$lib/components';
 	import { Button, buttonVariants } from '$lib/components/ui/button';
 </script>
 
@@ -59,16 +60,13 @@
 			</a>
 		</div>
 		<div class="flex-1">
-			<img class="relative scale-150 left-48" src={ComputerTwo} alt="Blue Computer" />
+			<img class="relative scale-150 left-48" src={computer2} alt="Blue Computer" />
 		</div>
 	</div>
 </section>
 
 <section class="py-20 px-[5%]">Previous ICT Research Congress images here.</section>
 
-<section class="flex flex-col items-center py-20 px-[5%]">
-	<p>Call to action</p>
-	<Button class="w-fit">Register</Button>
-</section>
+<CallForPapers />
 
-<footer class="py-20 px-[5%]">Footer here.</footer>
+<Footer />

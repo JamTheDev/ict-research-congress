@@ -2,15 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
+ * {
   border: 1px solid red;
-} */
+} 
 
 #hero {
     overflow: hidden;
     background: var(--primary);
     background: -webkit-linear-gradient(hsla(210, 51%, 36%, 0.5), hsla(210, 51%, 36%, 0.5), url("./lib/assets/images/hero.jpg"));
     background: linear-gradient(hsla(210, 51%, 36%, 0.5), hsla(210, 51%, 36%, 0.5)), url("./lib/assets/images/hero.jpg"); 
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    overflow: hidden;
+    background: var(--primary);
+    background: -webkit-linear-gradient(hsla(210, 51%, 36%, 0.5), hsla(210, 51%, 36%, 0.5), url("./lib/assets/images/10.png"));
+    background: linear-gradient(hsla(210, 51%, 36%, 0.5), hsla(210, 51%, 36%, 0.5)), url("./lib/assets/images/10.png"); 
     background-size: cover;
     background-position: center;
 }
