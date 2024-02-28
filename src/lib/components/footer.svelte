@@ -13,7 +13,7 @@
 
 			<div class="space-y-2">
 				<p class="uppercase text-base">City Government of Makati - Republic of the Philippines</p>
-				<p class="uppercase text-5xl">University of Makati</p>
+				<p class="uppercase text-5xl font-marcellus">University of Makati</p>
 				<p class="text-base">College of Computing and Information Sciences</p>
 			</div>
 		</div>
