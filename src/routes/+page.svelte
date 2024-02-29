@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { computer2, hero, logo1 } from '$lib/assets/images';
-	import { CallForPapers, Footer } from '$lib/components';
+	import { CallForPapers, EventLogo, Footer } from '$lib/components';
 	import { Button, buttonVariants } from '$lib/components/ui/button';
 </script>
 
@@ -26,22 +26,20 @@
 		href="/call-for-papers"
 		class="relative uppercase rounded-full text-primary-foreground text-lg h-auto bg-secondary px-7 py-2 mt-5 z-10"
 	>
-		Call for Papers!
+		Call for Papers
 	</a>
 </section>
 
 <section class="py-20">
 	<div class="flex flex-col justify-center items-center gap-6 pb-16">
-		<h1 class="text-5xl font-bold text-center text-gradient-primary">ABOUT THE</h1>
+		<h1 class="text-5xl font-metropolis-bold text-center text-gradient-primary">ABOUT THE</h1>
 
-		<div
-			class="aspect-[3/1] max-w-[25%] px-10 rounded-3xl grid place-items-center w-fit h-fit bg-gradient-to-t from-[#2D5C8B] to-[#004298]"
-		>
-			<img class="aspect-[3/1]" src={logo1} alt="ICT Research Congress Logo" />
-		</div>
+		<EventLogo />
 	</div>
 
-	<div class="px-[5%] flex items-center gap-10 w-full bg-gradient-to-r from-[#004298] to-secondary">
+	<div
+		class="px-[5%] py-10 flex items-center gap-10 w-full bg-gradient-to-r from-blue-900 to-secondary overflow-x-clip"
+	>
 		<div class="flex-1 flex flex-col gap-3">
 			<p class="text-3xl text-white text-justify">
 				The <strong>University of Makati (UMak) - IT Research Congress</strong> is an annual event
@@ -67,6 +65,6 @@
 
 <section class="py-20 px-[5%]">Previous ICT Research Congress images here.</section>
 
-<CallForPapers />
+<!-- <CallForPapers /> -->
 
 <Footer />

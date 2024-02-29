@@ -3,10 +3,18 @@
 </script>
 
 <section class="flex bg-primary text-primary-foreground px-[5%] relative overflow-hidden">
-	<div class="w-2/3 flex flex-col py-20 gap-5">
-		<h1 class="font-bold text-4xl md:text-6xl lg:text-8xl uppercase">Call for Papers</h1>
+	<img
+		src={computer1}
+		alt="Computer"
+		class="absolute -right-56 h-[calc(100%_+_1rem)] z-[9] hidden md:block"
+	/>
 
-		<p class="text-3xl">
+	<div class="w-2/3 flex flex-col py-20 gap-5 relative z-10">
+		<h1 class="font-metropolis-bold text-4xl xl:text-6xl 2xl:text-8xl uppercase">
+			Call for Papers
+		</h1>
+
+		<p class="text-xl xl:text-2xl 2xl:text-3xl font-metropolis-medium">
 			Do you have groundbreaking research pushing the boundaries of Information Technology? Share
 			your insights and innovations on the global stage at the UMak ICT Research Congress!
 		</p>
@@ -18,6 +26,4 @@
 			Submit Your Paper
 		</a>
 	</div>
-
-	<img src={computer1} alt="Computer" class="absolute -right-56 h-[calc(100%_+_1rem)]" />
 </section>
