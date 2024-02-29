@@ -1,4 +1,4 @@
-const watchElements = (
+const isElementsInView = (
   _callback: (visibleElements: Element) => {},
 ): IntersectionObserver => {
   const options: IntersectionObserverInit = {
@@ -18,4 +18,4 @@ const watchElements = (
   return new IntersectionObserver(_observerCallback, options);
 };
 
-export default watchElements;
+export default isElementsInView;

@@ -21,9 +21,9 @@
 		</a>
 
 		<div class="flex items-center gap-10">
-			<a href="/about" class="uppercase text-primary-foreground">About</a>
-			<a href="/faq" class="uppercase text-primary-foreground">FAQ</a>
-			<a href="/mechanics" class="uppercase text-primary-foreground">Mechanics</a>
+			<a href="/about" class="uppercase text-primary-foreground hover:font-metropolis-bold">About</a>
+			<a href="/faq" class="uppercase text-primary-foreground hover:font-metropolis-bold">FAQ</a>
+			<a href="/mechanics" class="uppercase text-primary-foreground hover:font-metropolis-bold">Mechanics</a>
 		</div>
 
 		<a
