@@ -68,6 +68,7 @@ const config = {
 				marcellus: 'marcellus, sans-serif',
 				metropolis: 'metropolis, sans-serif',
 				'metropolis-medium': 'metropolis-medium, sans-serif',
+				'metropolis-semibold': 'metropolis-semibold, sans-serif',
 				'metropolis-bold': 'metropolis-bold, sans-serif',
 				sans: [...fontFamily.sans]
 			}

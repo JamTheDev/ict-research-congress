@@ -64,6 +64,7 @@
 				class="relative scale-125 left-0 lg:left-48 xl:left-48 2xl:left-24"
 				src={computer2}
 				alt="Blue Computer"
+				loading="lazy"
 			/>
 		</div>
 	</div>
@@ -130,47 +131,95 @@
 		PREVIOUS ICT RESEARCH CONGRESS
 	</h1>
 
-	<div class="max-w-full w-full flex flex-row flex-wrap gap-5 *:hover:cursor-pointer">
-
-
+	<div class="max-w-full w-full flex flex-row flex-wrap gap-5">
 		<div class="relative flex-[70%] aspect-[1/3] h-96 rounded-xl bg-gray-300 overflow-hidden group">
+			<img
+				class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300 ease-in-out"
+				src={ictrc7th}
+				alt=""
+				loading="lazy"
+			/>
 
-			<img class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform" src={ictrc7th} alt="">
-			
-			<div class="absolute flex flex-col gap-3 bottom-0 p-5 ">
-				<h3 class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform">7th IT Research Congress</h3>
-				<a class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 transition-opacity" href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987">Watch Now</a>
+			<div class="absolute flex flex-col gap-3 bottom-0 p-5">
+				<h3
+					class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform duration-300 ease-in-out"
+				>
+					7th IT Research Congress
+				</h3>
+				<a
+					class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 duration-300 ease-in-out transition-[opacity,background-color,color] hover:bg-primary hover:text-primary-foreground"
+					href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987"
+					target="_blank"
+					rel="noreferrer">Watch Now</a
+				>
 			</div>
 		</div>
 
 		<div class="relative flex-[20%] aspect-[1/2] h-96 rounded-xl bg-gray-300 overflow-hidden group">
+			<img
+				class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300 ease-in-out"
+				src={ictrc8th}
+				alt=""
+				loading="lazy"
+			/>
 
-			<img class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform" src={ictrc8th} alt="">
-			
-			<div class="absolute flex flex-col gap-3 bottom-0 p-5 ">
-				<h3 class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform">8th IT Research Congress</h3>
-				<a class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 transition-opacity" href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987">Watch Now</a>
+			<div class="absolute flex flex-col gap-3 bottom-0 p-5">
+				<h3
+					class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform duration-300 ease-in-out"
+				>
+					8th IT Research Congress
+				</h3>
+				<a
+					class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 duration-300 ease-in-out transition-[opacity,background-color,color] hover:bg-primary hover:text-primary-foreground"
+					href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987"
+					target="_blank"
+					rel="noreferrer">Watch Now</a
+				>
 			</div>
 		</div>
 
 		<div class="relative flex-[10%] aspect-[1/3] h-96 rounded-xl bg-gray-300 overflow-hidden group">
+			<img
+				class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300 ease-in-out"
+				src={ictrc9th}
+				alt=""
+				loading="lazy"
+			/>
 
-			<img class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform" src={ictrc9th} alt="">
-			
-			<div class="absolute flex flex-col gap-3 bottom-0 p-5 ">
-				<h3 class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform">9th IT Research Congress</h3>
-				<a class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 transition-opacity" href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987">Watch Now</a>
+			<div class="absolute flex flex-col gap-3 bottom-0 p-5">
+				<h3
+					class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform duration-300 ease-in-out"
+				>
+					9th IT Research Congress
+				</h3>
+				<a
+					class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 duration-300 ease-in-out transition-[opacity,background-color,color] hover:bg-primary hover:text-primary-foreground"
+					href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987"
+					target="_blank"
+					rel="noreferrer">Watch Now</a
+				>
 			</div>
 		</div>
 
 		<div class="relative flex-[50%] aspect-[1/3] h-96 rounded-xl bg-gray-300 overflow-hidden group">
-
-			<img class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform" src={hero} alt="">
+			<img
+				class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300 ease-in-out"
+				src={hero}
+				alt=""
+				loading="lazy"
+			/>
 			<div class="absolute w-full h-full bg-gradient-to-t from-[#021329]"></div>
-			
-			<div class="absolute flex flex-col gap-3 bottom-0 p-5 ">
-				<h3 class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform">10th IT Research Congress</h3>
-				<a class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 transition-opacity" href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987">Watch Now</a>
+
+			<div class="absolute flex flex-col gap-3 bottom-0 p-5">
+				<h3
+					class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform duration-300 ease-in-out"
+				>
+					10th IT Research Congress
+				</h3>
+				<a
+					class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 duration-300 ease-in-out transition-[opacity,background-color,color] hover:bg-primary hover:text-primary-foreground"
+					href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987">Watch Now</a
+				>
 			</div>
 		</div>
 	</div>
