@@ -16,7 +16,7 @@ const config = {
 
 		extend: {
 			backgroundImage: {
-				nodes: "url('./src/lib/assets/images/10.webp')"
+				nodes: "url('./lib/assets/images/10.webp')"
 			},
 			boxShadow: {
 				'md-2': '0 4px 10px -1px rgb(0 0 0 / 0.3)'
