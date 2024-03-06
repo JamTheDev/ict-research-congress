@@ -5,6 +5,7 @@ import computer1 from './computer-1.webp';
 import computer2 from './computer-2.png';
 import nodes from './10.webp';
 import calendar from './calendar.png';
+import particles2 from './particles-2.webp';
 
 import ictrc7th from './ictrc-7th.png';
 import ictrc8th from './ictrc-8th.png';
@@ -25,5 +26,6 @@ export {
 	nodes,
 	umakLogo,
 	ccisLogo,
-	calendar
+	calendar,
+	particles2
 };

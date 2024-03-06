@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { computer2, hero, ictrc7th, ictrc8th, ictrc9th, logo1 } from '$lib/assets/images';
-	import { CallForPapers, EventLogo, Footer } from '$lib/components';
+	import { CallForPapers, EventLogo, Footer, Timeline } from '$lib/components';
 	import { Button, buttonVariants } from '$lib/components/ui/button';
 	import { faLightbulb, faMicrophone, faUserGroup } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
@@ -32,12 +32,8 @@
 	</a>
 </section>
 
+<Timeline />
 <section class="py-10 container">
-	<div class="flex flex-col justify-center items-center gap-6 pt-10 pb-16">
-		<h1 class="text-5xl font-metropolis-bold text-center text-gradient-primary">ABOUT THE</h1>
-		<EventLogo />
-	</div>
-
 	<div class="relative px-[5%] flex items-center gap-20 w-full h-[500px]">
 		<div
 			class="absolute w-full h-full scale-x-125 rounded-3xl left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-900 to-secondary -z-0"
