@@ -14,6 +14,9 @@ import ictrc9th from './ictrc-9th.png';
 import umakLogo from './umak-logo.png';
 import ccisLogo from './ccis-logo.png';
 
+import CURLogo from "./CUR-Logo.webp";
+import UniversitasLogo from "./Universitas-Logo.png";
+import IJCSR from "./IJCSR.jpg";
 export {
 	computer1,
 	computer2,
@@ -27,5 +30,8 @@ export {
 	umakLogo,
 	ccisLogo,
 	calendar,
-	particles2
+	particles2,
+	CURLogo,
+	UniversitasLogo,
+	IJCSR
 };
