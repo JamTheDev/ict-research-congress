@@ -17,6 +17,7 @@ import ccisLogo from './ccis-logo.png';
 import CURLogo from './CUR-Logo.webp';
 import UniversitasLogo from './Universitas-Logo.webp';
 import IJCSR from './IJCSR.webp';
+import RegistrationFormHeader from "./Registration-Form-Header.png";
 
 export {
 	computer1,
@@ -34,5 +35,6 @@ export {
 	particles2,
 	CURLogo,
 	UniversitasLogo,
-	IJCSR
+	IJCSR,
+	RegistrationFormHeader
 };
