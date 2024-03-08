@@ -16,7 +16,8 @@ const config = {
 
 		extend: {
 			backgroundImage: {
-				nodes: "url('./lib/assets/images/10.webp')"
+				nodes: "url('./lib/assets/images/10.webp')",
+				"radial-primary": "radial-gradient(79.21% 70.57% at 50% 50.1%, #2D5C8B 0%, #021329 100%)"
 			},
 			boxShadow: {
 				'md-2': '0 4px 10px -1px rgb(0 0 0 / 0.3)'

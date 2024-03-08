@@ -4,14 +4,7 @@
 	import { calendar, particles2 } from '$lib/assets/images';
 </script>
 
-<section class="px-[5%] py-10 flex items-center gap-10 bg-primary/15 relative overflow-hidden">
-	<img
-		src={particles2}
-		alt=""
-		draggable="false"
-		class="absolute right-0 top-0 z-[1] object-cover h-full hue-rotate-[50deg] opacity-75 scale-150"
-	/>
-
+<section class="px-[5%] pb-24 pt-10 flex items-center gap-10 relative overflow-hidden">
 	<!-- <img -->
 	<!-- 	src={particles2} -->
 	<!-- 	alt="" -->
@@ -27,15 +20,21 @@
 	<!-- 	<img src={calendar} alt="Calendar" /> -->
 	<!-- </div> -->
 
-	<div class="flex flex-col w-full gap-10 z-10">
-		<div class="absolute w-2 bg-blue-950 h-full top-0 left-1/2 -translate-x-1/2 z-[9]"></div>
+	<div class="container relative flex flex-col w-full gap-10 z-10">
+		<img
+			src={particles2}
+			alt=""
+			draggable="false"
+			class="absolute right-0 top-0 object-cover h-full hue-rotate-[50deg] opacity-75 scale-150 -z-20"
+		/>
+		<div class="absolute w-2 bg-blue-950 h-full top-0 left-1/2 -translate-x-1/2 z-[9] scale-y-150"></div>
 
 		{#each TIMELINE as { date, description, icon }, idx (idx)}
 			<div
 				class={`flex w-full items-center justify-center ${idx % 2 === 1 ? 'flex-row-reverse' : 'flex-row'}`}
 			>
-				<div class="px-8 py-6 bg-white rounded-lg w-full max-w-xl shadow-md">
-					<h3 class="font-metropolis-bold text-2xl lg:text-4xl uppercase mb-2">
+				<div class={`px-8 py-6 bg-blue-950 text-white rounded-lg w-full max-w-xl shadow-md ${idx % 2 === 1 ? 'text-start' : 'text-end'}`}>
+					<h3 class="font-metropolis-bold text-2xl lg:text-4xl uppercase mb-2 ">
 						{date}
 					</h3>
 					<p class="font-metropolis-medium text-base lg:text-lg">

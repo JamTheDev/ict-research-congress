@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { COLLABORATORS, WHY_ATTEND } from '$lib';
 	import { computer2, hero, ictrc7th, ictrc8th, ictrc9th, logo1 } from '$lib/assets/images';
 	import { CallForPapers, EventLogo, Footer, Timeline } from '$lib/components';
 	import { Button, buttonVariants } from '$lib/components/ui/button';
@@ -7,8 +8,7 @@
 </script>
 
 <section
-	class={`h-[100svh] pt-20 flex justify-center items-center px-[5%] flex-col relative`}
-	id="hero"
+	class={`h-[100svh] pt-20 flex justify-center items-center px-[5%] flex-col relative bg-radial-primary`}
 >
 	<!-- <img src={hero} class="absolute top-0 left-0 object-cover w-full h-full z-0" alt="hero" /> -->
 	<!-- <div class="absolute top-0 left-0 object-cover w-full h-full bg-primary/50 z-[1]"></div> -->
@@ -16,12 +16,10 @@
 	<img class="aspect-[16/5] max-h-[45%]" src={logo1} alt="ICT Research Congress" />
 
 	<div class="px-10 py-3 bg-gradient-to-b from-[#2D5C8B] to-[#004298] rounded-3xl mt-5 text-center">
-		<p class="uppercase font-semibold text-2xl text-primary-foreground">
-			Reformation of Computing Knowledge:
-		</p>
-		<p class="uppercase text-lg text-primary-foreground">
-			Crafting Research Through Cutting-edge Technology
-		</p>
+		<span class="uppercase font-semibold text-lg text-primary-foreground"> AI Horizons: </span>
+		<span class="uppercase text-lg text-primary-foreground">
+			Navigating the Future of Connectivity
+		</span>
 	</div>
 
 	<a
@@ -33,7 +31,7 @@
 </section>
 
 <Timeline />
-<section class="py-10 container">
+<section class="relative container">
 	<div class="relative px-[5%] flex items-center gap-20 w-full h-[500px]">
 		<div
 			class="absolute w-full h-full scale-x-125 rounded-3xl left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-900 to-secondary -z-0"
@@ -70,154 +68,81 @@
 	<h1
 		class="font-metropolis-bold px-20 py-5 text-3xl uppercase rounded-xl bg-gradient-to-b from-[#2D5C8B] to-[#004298] text-white"
 	>
-		Why attend the ICT Research Congress?
+		In Collaboration With
 	</h1>
 
-	<div class="max-w-full flex flex-row *:flex-[33%] flex-wrap">
-		<div class="flex flex-col flex-[33%] gap-5 justify-center items-center">
-			<div
-				class="relative bg-gradient-to-b aspect-square w-fit h-56 from-[#2D5C8B] to-[#021329] rounded-full p-10"
+	<div class="flex flex-row justify-center items-center gap-40">
+		{#each COLLABORATORS as collaborator}
+			<button
+				class={`aspect-square w-44 flex flex-col justify-center items-center transition-all group `}
+				on:click={() => window.open(collaborator.link, '_blank')}
 			>
-				<Fa
-					icon={faUserGroup}
-					class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-7xl scale-150 text-white"
-				/>
-			</div>
-
-			<h3 class="uppercase font-metropolis-bold text-3xl w-fit text-center">
-				networking opportunities
-			</h3>
-		</div>
-
-		<div class="flex flex-col flex-[33%] gap-5 justify-center items-center">
-			<div
-				class="relative bg-gradient-to-b aspect-square w-fit h-56 from-[#2D5C8B] to-[#021329] rounded-full p-10"
-			>
-				<Fa
-					icon={faMicrophone}
-					class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-7xl scale-150 text-white"
-				/>
-			</div>
-
-			<h3 class="uppercase font-metropolis-bold text-3xl w-fit text-center">
-				unique resource speakers
-			</h3>
-		</div>
-		<div class="flex flex-col flex-[33%] gap-5 justify-center items-center">
-			<div
-				class="relative bg-gradient-to-b aspect-square w-fit h-56 from-[#2D5C8B] to-[#021329] rounded-full p-10"
-			>
-				<Fa
-					icon={faLightbulb}
-					class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-7xl scale-150 text-white"
-				/>
-			</div>
-
-			<h3 class="uppercase font-metropolis-bold text-3xl w-fit text-center">
-				innovative <br /> learning
-			</h3>
-		</div>
+				<div class="flex flex-col gap-10">
+					<img class="group-hover:scale-125 transition-all" src={collaborator.icon} alt={`${collaborator.text}'s Logo'`} />
+					<span class="w-full text-center font-marcellus text-lg font-bold"
+						>{collaborator.text}</span
+					>
+				</div>
+				<a
+			href="/call-for-papers"
+			class="text-center opacity-0 -translate-y-6 transition-all group-hover:opacity-100 group-hover:translate-y-6 relative uppercase rounded-full text-primary-foreground text-sm h-auto bg-primary w-fit px-7 py-2 z-10"
+		>
+			visit
+		</a>
+			</button>
+		{/each}
 	</div>
 </section>
 
-<section class="py-20 px-[5%] container flex flex-col gap-10 items-center">
-	<h1
+<section class="py-20 px-[5%] flex flex-row justify-center items-center container gap-10 *:flex-1">
+	<!-- <h1
 		class="font-metropolis-bold px-20 py-5 text-3xl uppercase rounded-xl bg-gradient-to-b from-[#2D5C8B] to-[#004298] text-white"
 	>
-		PREVIOUS ICT RESEARCH CONGRESS
+		Why attend the ICT Research Congress?
 	</h1>
 
-	<div class="max-w-full w-full flex flex-row flex-wrap gap-5">
-		<div class="relative flex-[70%] aspect-[1/3] h-96 rounded-xl bg-gray-300 overflow-hidden group">
-			<img
-				class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300 ease-in-out"
-				src={ictrc7th}
-				alt=""
-				loading="lazy"
-			/>
+	<div class="max-w-full flex flex-row *:flex-[33%] justify-between flex-wrap ">
+		
+	</div> -->
 
-			<div class="absolute flex flex-col gap-3 bottom-0 p-5">
-				<h3
-					class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform duration-300 ease-in-out"
+	<div class="flex flex-col items-start justify-start gap-5">
+		<h1 class="text-5xl font-metropolis font-black">Why attend the ICT Research Congress?</h1>
+		<div class="h-1 bg-gradient-to-r from-primary via-90% w-full" />
+		<p>
+			Fuel your passion for ICT at the ICT Research Congress! Network with leading minds, explore
+			cutting-edge research, and shape the future of technology. Attend and ignite your career in
+			this dynamic field.
+		</p>
+
+		<a
+			href="/call-for-papers"
+			class="relative uppercase rounded-full text-primary-foreground text-lg h-auto bg-primary w-fit px-7 py-2 z-10"
+		>
+			register now
+		</a>
+	</div>
+
+	<div class="flex flex-row flex-wrap *:flex-1 gap-5">
+		{#each WHY_ATTEND as data}
+			<div class="flex flex-row gap-5 justify-between items-center my-5">
+				<div
+					class="relative bg-gradient-to-b aspect-square w-fit h-24 from-[#2D5C8B] to-[#021329] rounded-full"
 				>
-					7th IT Research Congress
-				</h3>
-				<a
-					class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 duration-300 ease-in-out transition-[opacity,background-color,color] hover:bg-primary hover:text-primary-foreground"
-					href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987"
-					target="_blank"
-					rel="noreferrer">Watch Now</a
-				>
+					<Fa
+						icon={data.icon}
+						class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-xl scale-150 text-white"
+					/>
+				</div>
+
+				<div class="flex flex-col w-full h-full">
+					<h3 class="uppercase font-metropolis-bold text-sm w-full flex-[20%]">
+						{data.title}
+					</h3>
+
+					<p class="flex-[80%]">Lorem ipsum very short text</p>
+				</div>
 			</div>
-		</div>
-
-		<div class="relative flex-[20%] aspect-[1/2] h-96 rounded-xl bg-gray-300 overflow-hidden group">
-			<img
-				class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300 ease-in-out"
-				src={ictrc8th}
-				alt=""
-				loading="lazy"
-			/>
-
-			<div class="absolute flex flex-col gap-3 bottom-0 p-5">
-				<h3
-					class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform duration-300 ease-in-out"
-				>
-					8th IT Research Congress
-				</h3>
-				<a
-					class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 duration-300 ease-in-out transition-[opacity,background-color,color] hover:bg-primary hover:text-primary-foreground"
-					href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987"
-					target="_blank"
-					rel="noreferrer">Watch Now</a
-				>
-			</div>
-		</div>
-
-		<div class="relative flex-[10%] aspect-[1/3] h-96 rounded-xl bg-gray-300 overflow-hidden group">
-			<img
-				class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300 ease-in-out"
-				src={ictrc9th}
-				alt=""
-				loading="lazy"
-			/>
-
-			<div class="absolute flex flex-col gap-3 bottom-0 p-5">
-				<h3
-					class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform duration-300 ease-in-out"
-				>
-					9th IT Research Congress
-				</h3>
-				<a
-					class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 duration-300 ease-in-out transition-[opacity,background-color,color] hover:bg-primary hover:text-primary-foreground"
-					href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987"
-					target="_blank"
-					rel="noreferrer">Watch Now</a
-				>
-			</div>
-		</div>
-
-		<div class="relative flex-[50%] aspect-[1/3] h-96 rounded-xl bg-gray-300 overflow-hidden group">
-			<img
-				class="absolute w-full h-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300 ease-in-out"
-				src={hero}
-				alt=""
-				loading="lazy"
-			/>
-			<div class="absolute w-full h-full bg-gradient-to-t from-[#021329]"></div>
-
-			<div class="absolute flex flex-col gap-3 bottom-0 p-5">
-				<h3
-					class="font-metropolis-bold text-3xl text-white translate-y-14 group-hover:-translate-y-0 transition-transform duration-300 ease-in-out"
-				>
-					10th IT Research Congress
-				</h3>
-				<a
-					class="bg-white rounded-xl px-5 py-2 w-fit opacity-0 group-hover:opacity-100 duration-300 ease-in-out transition-[opacity,background-color,color] hover:bg-primary hover:text-primary-foreground"
-					href="https://web.facebook.com/ICTResearchCongress/videos/7168114083214987">Watch Now</a
-				>
-			</div>
-		</div>
+		{/each}
 	</div>
 </section>
 
