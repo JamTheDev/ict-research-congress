@@ -72,7 +72,7 @@
 		<!-- 	In Collaboration With -->
 		<!-- </h1> -->
 
-		<h1 class="font-metropolis-black text-2xl md:text-4xl lg:text-6xl xl:text-7xl uppercase">
+		<h1 class="font-metropolis-black bg-gradient-to-t from-black to-gray-200 bg-clip-text text-2xl md:text-3xl lg:text-5xl xl:text-6xl uppercase">
 			In Collaboration With
 		</h1>
 
@@ -90,7 +90,7 @@
 					</div>
 
 					<div class="flex justify-between flex-col h-full gap-4">
-						<h3 class="text-sm md:text-base lg:text-lg font-metropolis-medium">
+						<h3 class="text-center text-sm md:text-base lg:text-lg font-marcellus font-bold">
 							{collaborator.text}
 						</h3>
 
