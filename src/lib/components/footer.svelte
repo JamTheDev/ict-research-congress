@@ -77,7 +77,7 @@
 			<div class="container py-5 px-[5%] flex gap-5">
 				<span>ICT Research Congress 2024</span>
 				|
-				<span>Acknowledgements</span>
+				<a href="/devs" target="_blank">Acknowledgements</a>
 			</div>
 		</div>
 	</div>

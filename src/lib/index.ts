@@ -62,7 +62,7 @@ export const COLLABORATORS: Collaborator[] = [
   },
   {
     icon: IJCSR,
-    text: "International Journal of Computing Science Research",
+    text: "International Journal of Computing Sciences Research",
     link: "https://stepacademic.net/ijcsr",
   },
 ];

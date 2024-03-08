@@ -6,7 +6,7 @@
 
 <Header title="About" />
 
-<section class="px-[5%] py-10 flex items-center flex-col gap-10">
+<section class="container px-[5%] py-10 flex items-center flex-col gap-10">
 	<EventLogo />
 
 	<p class="text-base lg:text-2xl font-metropolis-medium">
@@ -24,33 +24,44 @@
 	<Button class="rounded-full text-lg h-auto px-7 uppercase">Submit Now</Button>
 </section>
 
-<section class="px-[5%] py-10 flex flex-col items-center gap-10">
-	<div class="px-10 py-5 bg-primary text-primary-foreground rounded-2xl w-fit">
-		<h2 class="uppercase font-metropolis-bold text-4xl w-fit">About the University and College</h2>
-	</div>
+<section class="container px-[5%] py-10 flex flex-col items-center gap-10">
+	<h1
+		class="font-metropolis-bold px-20 py-5 text-3xl uppercase rounded-xl bg-gradient-to-b from-[#2D5C8B] to-[#004298] text-white"
+	>
+		About the university and college
+	</h1>
 
 	<div
-		class="px-16 py-10 bg-gradient-to-r from-secondary to-blue-900 flex gap-10 items-center text-primary-foreground w-full rounded-3xl"
+		class="px-16 py-20 bg-gradient-to-r from-secondary to-blue-900 flex gap-14 items-center text-primary-foreground w-full rounded-3xl"
 	>
-		<img src={umakLogo} alt="UMak logo" />
+		<img src={umakLogo} class="aspect-square w-72 drop-shadow-lg" alt="UMak logo" />
 
-		<div class="space-y-10">
-			<h3 class="text-6xl font-marcellus uppercase">University of Makati</h3>
+		<div class="space-y-5">
+			<h3 class="text-4xl font-marcellus uppercase">University of Makati</h3>
 
-			<p class="font-metropolis-medium text-base md:text-lg lg:text-2xl">
-				The University of Makati is the University of the City of Makati. We serve the children of
+			<p class="font-metropolis text-base md:text-lg lg:text-xl">
+				The <strong>University of Makati</strong> is the <strong>University of the City of Makati</strong>. We serve the children of
 				less priviledged citizens of the City so they can actively participate in and competitively
-				partake of the City's economic progress. We must never forget who we are, whom we are for,
+				partake of the City's economic progress. 
+
+				<br>
+				<br>
+
+				We must never forget who we are, whom we are for,
 				and what we have to do for those for whom we are.
 			</p>
+
+			<Button on:click={() => {
+				window.open("https://umak.edu.ph", "_blank")
+			}} class="rounded-full text-lg h-auto px-7 uppercase">Know More</Button>
 		</div>
 	</div>
 </section>
 
-<section class="px-[5%] py-10 flex flex-col items-center gap-10">
-	<div class="flex">
-		<img src={ccisLogo} alt="CCIS logo" />
-		<div class="px-16 py-10 bg-primary rounded-3xl">
+<section class="container px-[5%] py-10 flex flex-col items-center gap-10">
+	<div class="flex gap-10 items-center">
+		<img src={ccisLogo} class="aspect-square w-52" alt="CCIS logo" />
+		<div class="px-16 py-10 bg-gradient-to-b from-[#2D5C8B] to-[#004298] rounded-3xl h-fit">
 			<h2 class="uppercase font-metropolis-bold text-4xl w-fit text-primary-foreground">
 				About the College of Computing and Information Sciences
 			</h2>
@@ -59,7 +70,7 @@
 
 	<div class="space-y-10">
 		<p class="font-metropolis-medium text-2xl">
-			The College of Computing and Information Sciences (CCIS) is the leading college in ICT
+			The <strong>College of Computing and Information Sciences (CCIS)</strong> is the leading college in ICT
 			education programs of the university by providing competitive, relevant and functional IT
 			Curriculum responsive to the needs of the industrial and business organizations. The college
 			has of the following functions:
