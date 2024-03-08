@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { COLLABORATORS, WHY_ATTEND } from '$lib';
-	import { computer2, hero, ictrc7th, ictrc8th, ictrc9th, logo1 } from '$lib/assets/images';
-	import { CallForPapers, EventLogo, Footer, Timeline } from '$lib/components';
-	import { Button, buttonVariants } from '$lib/components/ui/button';
-	import { faLightbulb, faMicrophone, faUserGroup } from '@fortawesome/free-solid-svg-icons';
+	import { computer2, logo1 } from '$lib/assets/images';
+	import { Footer, Timeline } from '$lib/components';
+	import { buttonVariants } from '$lib/components/ui/button';
+	import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
 </script>
 
@@ -24,34 +24,34 @@
 
 	<a
 		href="/call-for-papers"
-		class="relative uppercase rounded-full text-primary-foreground text-lg h-auto bg-secondary px-7 py-2 mt-5 z-10"
+		class={buttonVariants({
+			variant: 'ghost',
+			class:
+				'text-lg px-7 mt-5 uppercase h-auto bg-black rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]'
+		})}
 	>
 		Call for Papers
 	</a>
 </section>
 
 <Timeline />
+
 <section class="relative container">
 	<div class="relative px-[5%] flex items-center gap-20 w-full h-[500px]">
 		<div
 			class="absolute w-full h-full scale-x-125 rounded-3xl left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-900 to-secondary -z-0"
 		></div>
 		<div class="flex-1 flex flex-col gap-3 z-10">
-			<p class="text-2xl text-white text-justify">
-				The <strong>University of Makati (UMak) - IT Research Congress</strong> is an annual event
-				of the
-				<strong
-					>University of Makati UMak College of Computing and Information Sciences (UMak - CCIS)</strong
-				> where Researchers, students, and industry professionals collide to exchange ideas, showcase
-				discoveries, and shape the future of technology.
+			<p class="text-2xl text-primary-foreground leading-10">
+				The
+				<span class="font-metropolis-bold">ICT Research Congress</span>
+				is an annual event of the
+				<span class="font-metropolis-bold"
+					>University of Makati - College of Computing and Information Sciences (UMak - CCIS)</span
+				>
+				where researchers, students, and industry professionals collide to exchange ideas, showcase discoveries,
+				and shape the future of technology.
 			</p>
-
-			<a
-				href="/call-for-papers"
-				class="relative uppercase rounded-full text-primary-foreground text-lg h-auto bg-primary w-fit px-7 py-2 mt-5 z-10"
-			>
-				know more
-			</a>
 		</div>
 		<div class="flex-1">
 			<img
@@ -64,85 +64,97 @@
 	</div>
 </section>
 
-<section class="py-20 px-[5%] flex flex-col justify-center items-center container gap-20">
-	<h1
-		class="font-metropolis-bold px-20 py-5 text-3xl uppercase rounded-xl bg-gradient-to-b from-[#2D5C8B] to-[#004298] text-white"
-	>
-		In Collaboration With
-	</h1>
+<section class="bg-blue-50">
+	<div class="py-20 px-[5%] container flex flex-col justify-center items-center gap-20">
+		<!-- <h1 -->
+		<!-- 	class="font-metropolis-bold px-20 py-5 text-3xl uppercase rounded-xl bg-gradient-to-b from-[#2D5C8B] to-[#004298] text-white" -->
+		<!-- > -->
+		<!-- 	In Collaboration With -->
+		<!-- </h1> -->
 
-	<div class="flex flex-row justify-center items-center gap-40">
-		{#each COLLABORATORS as collaborator}
-			<button
-				class={`aspect-square w-44 flex flex-col justify-center items-center transition-all group `}
-				on:click={() => window.open(collaborator.link, '_blank')}
-			>
-				<div class="flex flex-col gap-10">
-					<img class="group-hover:scale-125 transition-all" src={collaborator.icon} alt={`${collaborator.text}'s Logo'`} />
-					<span class="w-full text-center font-marcellus text-lg font-bold"
-						>{collaborator.text}</span
-					>
+		<h1 class="font-metropolis-black text-2xl md:text-4xl lg:text-6xl xl:text-7xl uppercase">
+			In Collaboration With
+		</h1>
+
+		<div class="grid grid-cols-3 gap-10">
+			{#each COLLABORATORS as collaborator}
+				<div
+					class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-col shadow-b-2xl shadow-secondary/25 p-6"
+				>
+					<div class="p-6 w-full flex justify-center">
+						<img
+							class="h-60 object-cover"
+							src={collaborator.icon}
+							alt={`${collaborator.text}'s Logo'`}
+						/>
+					</div>
+
+					<div class="flex justify-between flex-col h-full gap-4">
+						<h3 class="text-sm md:text-base lg:text-lg font-metropolis-medium">
+							{collaborator.text}
+						</h3>
+
+						<a
+							href={collaborator.link}
+							target="_blank"
+							rel="noreferrer"
+							class={buttonVariants({
+								class:
+									'w-fit gap-2 text-base h-auto rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]'
+							})}
+						>
+							<span class="font-metropolis-medium">Visit</span>
+
+							<Fa icon={faArrowUpRightFromSquare} />
+						</a>
+					</div>
 				</div>
-				<a
-			href="/call-for-papers"
-			class="text-center opacity-0 -translate-y-6 transition-all group-hover:opacity-100 group-hover:translate-y-6 relative uppercase rounded-full text-primary-foreground text-sm h-auto bg-primary w-fit px-7 py-2 z-10"
-		>
-			visit
-		</a>
-			</button>
-		{/each}
+			{/each}
+		</div>
 	</div>
 </section>
 
-<section class="py-20 px-[5%] flex flex-row justify-center items-center container gap-10 *:flex-1">
-	<!-- <h1
-		class="font-metropolis-bold px-20 py-5 text-3xl uppercase rounded-xl bg-gradient-to-b from-[#2D5C8B] to-[#004298] text-white"
-	>
-		Why attend the ICT Research Congress?
-	</h1>
+<section class="shadow-t-section shadow-secondary">
+	<div class="py-20 px-[5%] flex flex-row justify-center items-center container gap-10 *:flex-1">
+		<div class="flex flex-col items-start justify-start gap-5">
+			<h1 class="text-5xl font-metropolis-bold">Why attend the ICT Research Congress?</h1>
+			<div class="h-1 bg-gradient-to-r from-primary via-90% w-full" />
+			<p>
+				Fuel your passion for ICT at the ICT Research Congress! Network with leading minds, explore
+				cutting-edge research, and shape the future of technology. Attend and ignite your career in
+				this dynamic field.
+			</p>
 
-	<div class="max-w-full flex flex-row *:flex-[33%] justify-between flex-wrap ">
-		
-	</div> -->
+			<a
+				href="/call-for-papers"
+				class="relative uppercase rounded-full text-primary-foreground text-lg h-auto bg-primary w-fit px-7 py-2 z-10"
+			>
+				Register Now
+			</a>
+		</div>
 
-	<div class="flex flex-col items-start justify-start gap-5">
-		<h1 class="text-5xl font-metropolis font-black">Why attend the ICT Research Congress?</h1>
-		<div class="h-1 bg-gradient-to-r from-primary via-90% w-full" />
-		<p>
-			Fuel your passion for ICT at the ICT Research Congress! Network with leading minds, explore
-			cutting-edge research, and shape the future of technology. Attend and ignite your career in
-			this dynamic field.
-		</p>
+		<div class="flex flex-row flex-wrap *:flex-1 gap-5">
+			{#each WHY_ATTEND as data, idx (idx)}
+				<div class="flex flex-row gap-5 justify-between items-center my-5">
+					<div
+						class="relative bg-gradient-to-b aspect-square w-fit h-24 from-[#2D5C8B] to-[#021329] rounded-full"
+					>
+						<Fa
+							icon={data.icon}
+							class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-xl scale-150 text-white"
+						/>
+					</div>
 
-		<a
-			href="/call-for-papers"
-			class="relative uppercase rounded-full text-primary-foreground text-lg h-auto bg-primary w-fit px-7 py-2 z-10"
-		>
-			register now
-		</a>
-	</div>
+					<div class="flex flex-col w-full h-full">
+						<h3 class="uppercase font-metropolis-bold text-sm w-full flex-[20%]">
+							{data.title}
+						</h3>
 
-	<div class="flex flex-row flex-wrap *:flex-1 gap-5">
-		{#each WHY_ATTEND as data}
-			<div class="flex flex-row gap-5 justify-between items-center my-5">
-				<div
-					class="relative bg-gradient-to-b aspect-square w-fit h-24 from-[#2D5C8B] to-[#021329] rounded-full"
-				>
-					<Fa
-						icon={data.icon}
-						class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-xl scale-150 text-white"
-					/>
+						<p class="flex-[80%]">Lorem ipsum very short text</p>
+					</div>
 				</div>
-
-				<div class="flex flex-col w-full h-full">
-					<h3 class="uppercase font-metropolis-bold text-sm w-full flex-[20%]">
-						{data.title}
-					</h3>
-
-					<p class="flex-[80%]">Lorem ipsum very short text</p>
-				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</div>
 </section>
 

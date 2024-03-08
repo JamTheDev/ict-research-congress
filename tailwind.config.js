@@ -17,9 +17,11 @@ const config = {
 		extend: {
 			backgroundImage: {
 				nodes: "url('./lib/assets/images/10.webp')",
-				"radial-primary": "radial-gradient(79.21% 70.57% at 50% 50.1%, #2D5C8B 0%, #021329 100%)"
+				'radial-primary': 'radial-gradient(79.21% 70.57% at 50% 50.1%, #2D5C8B 0%, #021329 100%)'
 			},
 			boxShadow: {
+				'b-2xl': '0 40px 40px -40px',
+				't-section': '0 24px 38px',
 				'md-2': '0 4px 10px -1px rgb(0 0 0 / 0.3)'
 			},
 			spacing: {
@@ -71,6 +73,7 @@ const config = {
 				'metropolis-medium': 'metropolis-medium, sans-serif',
 				'metropolis-semibold': 'metropolis-semibold, sans-serif',
 				'metropolis-bold': 'metropolis-bold, sans-serif',
+				'metropolis-black': 'metropolis-black, sans-serif',
 				sans: [...fontFamily.sans]
 			}
 		}

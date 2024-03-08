@@ -14,9 +14,10 @@ import ictrc9th from './ictrc-9th.png';
 import umakLogo from './umak-logo.png';
 import ccisLogo from './ccis-logo.png';
 
-import CURLogo from "./CUR-Logo.webp";
-import UniversitasLogo from "./Universitas-Logo.png";
-import IJCSR from "./IJCSR.jpg";
+import CURLogo from './CUR-Logo.webp';
+import UniversitasLogo from './Universitas-Logo.webp';
+import IJCSR from './IJCSR.webp';
+
 export {
 	computer1,
 	computer2,
