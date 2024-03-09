@@ -23,7 +23,7 @@
 				class={`flex w-full items-center justify-center  ${idx % 2 === 1 ? 'flex-row-reverse' : 'flex-row'}`}
 			>
 				<div
-					class={`px-8 py-6 bg-blue-950 text-white rounded-lg w-full  shadow-b-2xl shadow-secondary/75 ${idx % 2 === 1 ? 'text-start' : 'text-end'}`}
+					class={`px-8 py-6 bg-blue-950 border border-secondary text-white rounded-lg w-full  shadow-b-2xl shadow-secondary/75 ${idx % 2 === 1 ? 'text-start' : 'text-end'}`}
 				>
 					<h3 class="font-metropolis-bold text-2xl lg:text-4xl uppercase mb-2">
 						{date}

@@ -1,37 +1,81 @@
 <script lang="ts">
-	import { COLLABORATORS, WHY_ATTEND } from '$lib';
-	import { computer2, logo1 } from '$lib/assets/images';
+	import { COLLABORATORS, SPEAKERS, WHY_ATTEND } from '$lib';
+	import { computer2, logo1, nodes, particles1, particles2 } from '$lib/assets/images';
 	import { Footer, Timeline } from '$lib/components';
 	import { buttonVariants } from '$lib/components/ui/button';
-	import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+	import {
+		faArrowUpRightFromSquare,
+		faCalendarDay,
+		faLocationDot
+	} from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
 </script>
 
 <section
 	class={`h-[100svh] pt-20 flex justify-center items-center px-[5%] flex-col relative bg-radial-primary`}
 >
+	<img
+		src={particles1}
+		alt=""
+		class="absolute -top-20 -right-80 object-cover max-h-[60%] z-0"
+		draggable="false"
+	/>
+	<img
+		src={particles2}
+		alt=""
+		class="absolute -top-60 -left-20 object-cover max-h-[75%] z-0 rotate-45"
+		draggable="false"
+	/>
+	<img
+		src={nodes}
+		alt=""
+		class="absolute -bottom-40 left-0 object-cover w-full z-0"
+		draggable="false"
+	/>
 	<!-- <img src={hero} class="absolute top-0 left-0 object-cover w-full h-full z-0" alt="hero" /> -->
 	<!-- <div class="absolute top-0 left-0 object-cover w-full h-full bg-primary/50 z-[1]"></div> -->
 
-	<img class="aspect-[16/5] max-h-[45%]" src={logo1} alt="ICT Research Congress" />
+	<div class="flex justify-center items-center flex-col w-full h-full space-y-4">
+		<img class="aspect-[16/5] max-h-[45%]" src={logo1} alt="ICT Research Congress" />
 
-	<div class="px-10 py-3 bg-gradient-to-b from-[#2D5C8B] to-[#004298] rounded-3xl mt-5 text-center">
-		<span class="uppercase font-semibold text-lg text-primary-foreground"> AI Horizons: </span>
-		<span class="uppercase text-lg text-primary-foreground">
-			Navigating the Future of Connectivity
-		</span>
+		<div
+			class="px-10 py-3 bg-gradient-to-r from-secondary/25 via-transparent to-secondary/25 text-center rounded-full"
+		>
+			<!-- <span class="font-semibold text-lg text-primary-foreground"> AI Horizons: </span> -->
+			<!-- <span class="text-lg text-primary-foreground"> -->
+			<!-- 	Navigating the Future of Connectivity -->
+			<!-- </span> -->
+
+			<p class="font-metropolis-black text-lg text-primary-foreground">
+				AI Horizons: Navigating the Future of Connectivity
+			</p>
+		</div>
+
+		<div class="flex items-center gap-10">
+			<div class="flex items-center gap-2">
+				<Fa icon={faLocationDot} size="1.5x" class="text-yellow-500/70" />
+				<span class="text-primary-foreground font-metropolis-black text-lg"
+					>University of Makati</span
+				>
+			</div>
+
+			<div class="flex items-center gap-2">
+				<Fa icon={faCalendarDay} size="1.5x" class="text-yellow-500/70" />
+				<span class="text-primary-foreground font-metropolis-black text-lg">May 10, 2024</span>
+			</div>
+		</div>
+
+		<a
+			href="/call-for-papers"
+			class={buttonVariants({
+				variant: 'ghost',
+				class:
+					'text-lg px-7 mt-5 uppercase h-auto bg-black rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]'
+			})}
+		>
+			Call for Papers
+		</a>
 	</div>
-
-	<a
-		href="/call-for-papers"
-		class={buttonVariants({
-			variant: 'ghost',
-			class:
-				'text-lg px-7 mt-5 uppercase h-auto bg-black rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]'
-		})}
-	>
-		Call for Papers
-	</a>
 </section>
 
 <Timeline />
@@ -66,20 +110,53 @@
 
 <section class="bg-blue-50">
 	<div class="py-20 px-[5%] container flex flex-col justify-center items-center gap-20">
-		<!-- <h1 -->
-		<!-- 	class="font-metropolis-bold px-20 py-5 text-3xl uppercase rounded-xl bg-gradient-to-b from-[#2D5C8B] to-[#004298] text-white" -->
-		<!-- > -->
-		<!-- 	In Collaboration With -->
-		<!-- </h1> -->
+		<h1
+			class="font-metropolis-black bg-gradient-to-t from-black to-gray-200 bg-clip-text text-2xl md:text-3xl lg:text-5xl xl:text-6xl uppercase"
+		>
+			Speakers
+		</h1>
 
-		<h1 class="font-metropolis-black bg-gradient-to-t from-black to-gray-200 bg-clip-text text-2xl md:text-3xl lg:text-5xl xl:text-6xl uppercase">
+		<div class="grid grid-cols-4 gap-10 w-full">
+			{#each SPEAKERS as speaker, idx (idx)}
+				<div
+					class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-col shadow-b-2xl shadow-secondary/25 p-6 w-full"
+				>
+					<div class="p-6 w-full flex justify-center">
+						<img
+							class="h-60 w-60 object-cover bg-blue-900/10 rounded-xl"
+							alt={speaker.name}
+							src={speaker.imageUrl}
+							loading="lazy"
+						/>
+					</div>
+
+					<div class="flex justify-between flex-col h-full gap-2">
+						<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
+							{speaker.name}
+						</h3>
+
+						<p class="text-muted-foreground text-sm md:text-base">
+							{speaker.description}
+						</p>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</div>
+</section>
+
+<section class="bg-blue-50">
+	<div class="py-20 px-[5%] container flex flex-col justify-center items-center gap-20">
+		<h1
+			class="font-metropolis-black bg-gradient-to-t from-black to-gray-200 bg-clip-text text-2xl md:text-3xl lg:text-5xl xl:text-6xl uppercase"
+		>
 			In Collaboration With
 		</h1>
 
-		<div class="grid grid-cols-3 gap-10">
-			{#each COLLABORATORS as collaborator}
+		<div class="grid grid-cols-3 gap-10 w-full">
+			{#each COLLABORATORS as collaborator, idx (idx)}
 				<div
-					class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-col shadow-b-2xl shadow-secondary/25 p-6"
+					class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-col shadow-b-2xl shadow-secondary/25 p-6 w-full"
 				>
 					<div class="p-6 w-full flex justify-center">
 						<img
@@ -90,7 +167,7 @@
 					</div>
 
 					<div class="flex justify-between flex-col h-full gap-4">
-						<h3 class="text-center text-sm md:text-base lg:text-lg font-marcellus font-bold">
+						<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
 							{collaborator.text}
 						</h3>
 

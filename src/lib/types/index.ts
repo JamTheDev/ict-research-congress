@@ -11,7 +11,13 @@ export type Collaborator = {
 	text: string;
 	customClass?: string;
 	link: string;
-}
+};
+
+export type Speaker = {
+	name: string;
+	description?: string;
+	imageUrl?: string;
+};
 
 export type Route = {
 	path: string;
@@ -19,6 +25,6 @@ export type Route = {
 };
 
 export interface WhyAttendData {
-    title: string
-    icon: IconDefinition
+	title: string;
+	icon: IconDefinition;
 }
