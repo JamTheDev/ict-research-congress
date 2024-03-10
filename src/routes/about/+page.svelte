@@ -11,13 +11,16 @@
 
 	<p class="text-base lg:text-2xl font-metropolis-medium">
 		The
-		<span class="font-metropolis-bold">University of Makati (UMak) - ICT Research Congress </span>
-		is an annual event of the University of Makati UMak College of Computing and Information Sciences
-		(UMak CCIS) where researchers, students, and industry professionals collide to exchange ideas, showcase
-		discoveries, and shape the future of technology.
+		<span class="font-metropolis-bold">ICT Research Congress</span>
+		is an annual event of the
+		<span class="font-metropolis-bold"
+			>University of Makati - College of Computing and Information Sciences (UMak - CCIS)</span
+		>
+		that started on 2013 where researchers, students, and industry professionals collide to exchange
+		ideas, showcase discoveries, and shape the future of technology.
 		<br />
 		<br />
-		Now in it's 11th year, it seeks out innovative and educative researches in the CS/ IT / CPE / IS
+		Now in it's 11th year, it seeks out innovative and educative researches in the CS / IT / CPE / IS
 		field.
 	</p>
 
@@ -40,20 +43,23 @@
 			<h3 class="text-4xl font-marcellus uppercase">University of Makati</h3>
 
 			<p class="font-metropolis text-base md:text-lg lg:text-xl">
-				The <strong>University of Makati</strong> is the <strong>University of the City of Makati</strong>. We serve the children of
+				Located in the City of Makati, Philippines, the University of Makati serves the children of
 				less priviledged citizens of the City so they can actively participate in and competitively
-				partake of the City's economic progress. 
+				partake of the City's economic progress.
 
-				<br>
-				<br>
+				<br />
+				<br />
 
-				We must never forget who we are, whom we are for,
-				and what we have to do for those for whom we are.
+				We must never forget who we are, whom we are for, and what we have to do for those for whom
+				we are.
 			</p>
 
-			<Button on:click={() => {
-				window.open("https://umak.edu.ph", "_blank")
-			}} class="rounded-full text-lg h-auto px-7 uppercase">Know More</Button>
+			<Button
+				on:click={() => {
+					window.open('https://umak.edu.ph', '_blank');
+				}}
+				class="rounded-full text-lg h-auto px-7 uppercase">Know More</Button
+			>
 		</div>
 	</div>
 </section>
@@ -70,10 +76,10 @@
 
 	<div class="space-y-10">
 		<p class="font-metropolis-medium text-2xl">
-			The <strong>College of Computing and Information Sciences (CCIS)</strong> is the leading college in ICT
-			education programs of the university by providing competitive, relevant and functional IT
-			Curriculum responsive to the needs of the industrial and business organizations. The college
-			has of the following functions:
+			The <strong>College of Computing and Information Sciences (CCIS)</strong> is the leading college
+			in ICT education programs of the university by providing competitive, relevant and functional IT
+			Curriculum responsive to the needs of the industrial and business organizations. The college has
+			of the following functions:
 		</p>
 
 		<ul class="list-disc space-y-4 text-xl [&>li>p]:font-metropolis-medium pl-10">

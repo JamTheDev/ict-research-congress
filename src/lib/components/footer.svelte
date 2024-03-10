@@ -60,7 +60,7 @@
 			<div class="container">
 				<a
 					href="https://web.facebook.com/ICTResearchCongress"
-					class="flex items-center gap-4 mb-2"
+					class="flex items-center gap-4 mb-2 hover:brightness-75 transition-[filter] duration-300 ease-in-out"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -68,7 +68,10 @@
 					<p class="text-lg lg:text-lg font-metropolis-medium">/ ICT Research Congress</p>
 				</a>
 
-				<a href="mailto:ccis@umak.edu.ph" class="text-md font-metropolis-medium">ccis@umak.edu.ph</a
+				<a
+					href="mailto:ccis@umak.edu.ph"
+					class="text-md font-metropolis-medium hover:brightness-75 transition-[filter] duration-300 ease-in-out"
+					>ccis@umak.edu.ph</a
 				>
 			</div>
 		</div>
@@ -77,7 +80,12 @@
 			<div class="container py-5 px-[5%] flex gap-5">
 				<span>ICT Research Congress 2024</span>
 				|
-				<a href="/devs" target="_blank">Acknowledgements</a>
+				<a
+					href="/devs"
+					target="_blank"
+					class="hover:brightness-75 transition-[filter] duration-300 ease-in-out"
+					>Acknowledgements</a
+				>
 			</div>
 		</div>
 	</div>

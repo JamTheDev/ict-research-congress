@@ -4,23 +4,25 @@
 	import '../app.pcss';
 	import { curScrollDir } from '$lib/store';
 	import { ScrollDirection } from '$lib/enums';
-
+	import { Toaster } from '$lib/components/ui/sonner';
 
 	let oldScrollY: number = 0;
 	let scrollY: number;
 
 	const onUserScrollEvent = (e: Event) => {
 		if (oldScrollY < scrollY) {
-			curScrollDir.update(v => ScrollDirection.DOWN)
+			curScrollDir.update((v) => ScrollDirection.DOWN);
 		} else {
-			curScrollDir.update(v => ScrollDirection.UP)
+			curScrollDir.update((v) => ScrollDirection.UP);
 		}
 
 		oldScrollY = scrollY;
-	}
+	};
 </script>
 
-<svelte:window on:scroll={onUserScrollEvent} bind:scrollY={scrollY} />
+<Toaster closeButton richColors />
+
+<svelte:window on:scroll={onUserScrollEvent} bind:scrollY />
 
 <Navbar />
 

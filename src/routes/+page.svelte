@@ -35,7 +35,7 @@
 	<!-- <img src={hero} class="absolute top-0 left-0 object-cover w-full h-full z-0" alt="hero" /> -->
 	<!-- <div class="absolute top-0 left-0 object-cover w-full h-full bg-primary/50 z-[1]"></div> -->
 
-	<div class="flex justify-center items-center flex-col w-full h-full space-y-4">
+	<div class="flex justify-center items-center flex-col w-full h-full space-y-4 relative z-10">
 		<img class="aspect-[16/5] max-h-[45%]" src={logo1} alt="ICT Research Congress" />
 
 		<div
@@ -93,8 +93,8 @@
 				<span class="font-metropolis-bold"
 					>University of Makati - College of Computing and Information Sciences (UMak - CCIS)</span
 				>
-				where researchers, students, and industry professionals collide to exchange ideas, showcase discoveries,
-				and shape the future of technology.
+				that started on 2013 where researchers, students, and industry professionals collide to exchange
+				ideas, showcase discoveries, and shape the future of technology.
 			</p>
 		</div>
 		<div class="flex-1">
@@ -203,7 +203,7 @@
 			</p>
 
 			<a
-				href="/call-for-papers"
+				href="/register"
 				class="relative uppercase rounded-full text-primary-foreground text-lg h-auto bg-primary w-fit px-7 py-2 z-10"
 			>
 				Register Now

@@ -9,11 +9,35 @@
 	import { faCheck, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
 	import { Button } from '$lib/components/ui/button';
+	import { toast } from 'svelte-sonner';
 
 	export let data: SuperValidated<Infer<RegisterSchema>>;
 
+	let loadingToast: string | number;
+
 	const form = superForm(data, {
-		validators: zodClient(registerSchema)
+		validators: zodClient(registerSchema),
+		onSubmit: () => {
+			loadingToast = toast.loading('Submitting form...', { duration: Number.POSITIVE_INFINITY });
+		},
+		onResult: ({ result }) => {
+			toast.dismiss(loadingToast);
+
+			switch (result.type) {
+				case 'success':
+					toast.success(result.data?.message);
+					break;
+				case 'failure':
+					toast.error(result.data?.message);
+					break;
+				case 'error':
+					toast.error(result.error);
+					break;
+				default:
+					toast.warning('Unknown action result type.');
+					break;
+			}
+		}
 	});
 
 	const { form: formData, enhance } = form;
@@ -97,7 +121,8 @@
 				</Button>
 
 				<Button
-					class="bg-gradient-to-r from-primary to-secondary/30 space-x-1 hover:scale-95 transition-all duration-300 ease-in-out"
+					class="bg-gradient-to-r from-primary to-secondary/50 space-x-1 hover:scale-95 hover:bg-right transition-[background-position,transform] duration-300 ease-in-out bg-[length:200%] bg-left"
+					on:click={() => toast.loading('Foo')}
 				>
 					<span>Next</span>
 					<Fa icon={faChevronRight} />
@@ -105,7 +130,7 @@
 
 				<Form.Button
 					type="submit"
-					class="bg-gradient-to-r from-primary to-secondary/30 space-x-1 hover:scale-95 transition-all duration-300 ease-in-out"
+					class="bg-gradient-to-r from-primary to-secondary/50 space-x-1 hover:scale-95 hover:bg-right transition-[background-position,transform] duration-300 ease-in-out bg-[length:200%] bg-left"
 				>
 					<span>Submit</span>
 					<Fa icon={faCheck} />

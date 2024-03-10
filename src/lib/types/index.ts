@@ -24,7 +24,18 @@ export type Route = {
 	name: string;
 };
 
-export interface WhyAttendData {
+export type WhyAttendData = {
 	title: string;
 	icon: IconDefinition;
-}
+};
+
+export type Schedule = {
+	startTime: string;
+	endTime: string;
+	programs: Program[];
+};
+
+export type Program = {
+	title: string;
+	events?: string[];
+};
