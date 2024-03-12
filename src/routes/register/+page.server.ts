@@ -31,11 +31,12 @@ export const actions: Actions = {
 			);
 		}
 
-		const paymentFileName = `${form.data.email}_PAYMENT`;
+		// Receipt
+		const receiptFileName = `${form.data.presenter.first_name} ${form.data.presenter.last_name} - ${form.data.paper_title} - RECEIPT`;
 
 		const { error: storageError } = await supabase.storage
-			.from('payments')
-			.upload(paymentFileName, form.data.payment_image, {
+			.from('receipts')
+			.upload(receiptFileName, form.data.receipt_image, {
 				cacheControl: '3600',
 				upsert: true
 			});
@@ -43,30 +44,99 @@ export const actions: Actions = {
 		if (storageError) {
 			console.log(`STORAGE ERROR: ${storageError.message}`);
 
-			return withFiles({
-				form,
-				success: false,
-				message: `STORAGE ERROR: ${storageError.message}`
-			});
+			return fail(
+				500,
+				withFiles({
+					form,
+					success: false,
+					message: `STORAGE ERROR: ${storageError.message}`
+				})
+			);
 		}
 
-		const paymentImageUrl = `${PUBLIC_SUPABASE_URL}/storage/v1/object/public/payments/${paymentFileName}`;
+		const receiptImageUrl = `${PUBLIC_SUPABASE_URL}/storage/v1/object/public/receipts/${receiptFileName}`;
 
-		const { error: insertError } = await supabase.from('participants').insert({
-			first_name: form.data.first_name,
-			last_name: form.data.last_name,
-			email: form.data.email,
-			payment_image_url: paymentImageUrl
+		// Paper
+		const { data: paperData, error: paperError } = await supabase
+			.from('papers')
+			.insert({
+				title: form.data.paper_title
+			})
+			.select('id')
+			.single();
+
+		if (paperError) {
+			console.log(`INSERT ERROR ${paperError.code}: ${paperError.message}`);
+
+			return fail(
+				+paperError.code,
+				withFiles({
+					form,
+					success: false,
+					message: `INSERT ERROR ${paperError.code}: ${paperError.message}`
+				})
+			);
+		}
+
+		form.data.authors = form.data.authors.map((author) => {
+			return {
+				...author,
+				paper_id: paperData.id
+			};
 		});
 
-		if (insertError) {
-			console.log(`INSERT ERROR ${insertError.code}: ${insertError.message}`);
+		// Authors
+		const { error: authorsError } = await supabase.from('authors').insert(form.data.authors);
 
-			return withFiles({
-				form,
-				success: false,
-				message: `INSERT ERROR ${insertError.code}: ${insertError.message}`
-			});
+		if (authorsError) {
+			console.log(`INSERT ERROR ${authorsError.code}: ${authorsError.message}`);
+
+			return fail(
+				+authorsError.code,
+				withFiles({
+					form,
+					success: false,
+					message: `INSERT ERROR ${authorsError.code}: ${authorsError.message}`
+				})
+			);
+		}
+
+		// Presenter
+		const { error: presenterError } = await supabase.from('presenters').insert({
+			...form.data.presenter,
+			paper_id: paperData.id
+		});
+
+		if (presenterError) {
+			console.log(`INSERT ERROR ${presenterError.code}: ${presenterError.message}`);
+
+			return fail(
+				+presenterError.code,
+				withFiles({
+					form,
+					success: false,
+					message: `INSERT ERROR ${presenterError.code}: ${presenterError.message}`
+				})
+			);
+		}
+
+		// Registration entry
+		const { error: entryError } = await supabase.from('entries').insert({
+			receipt_url: receiptImageUrl,
+			paper_id: paperData.id
+		});
+
+		if (entryError) {
+			console.log(`INSERT ERROR ${entryError.code}: ${entryError.message}`);
+
+			return fail(
+				+entryError.code,
+				withFiles({
+					form,
+					success: false,
+					message: `INSERT ERROR ${entryError.code}: ${entryError.message}`
+				})
+			);
 		}
 
 		console.log('Successfully registered!');
