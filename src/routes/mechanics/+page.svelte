@@ -104,7 +104,18 @@
 			Registration
 		</h2>
 
-		<div>Hello World</div>
+		<p>
+			Download the template
+			<a
+				href="/documents/2024-11th-ICT-Research-Congress-Template-Guide-for-Authors.docx"
+				class="underline text-primary font-metropolis-semibold"
+				target="_blank"
+				rel="noreferrer"
+			>
+				here
+			</a>
+			.
+		</p>
 	</div>
 
 	<div class="space-y-4">

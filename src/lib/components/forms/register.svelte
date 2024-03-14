@@ -202,46 +202,105 @@
 						</div>
 					</div>
 
-					<div class="space-y-2 flex-1">
-						<Input
-							{...$constraints.presenter?.contact_number}
-							type="tel"
-							bind:value={$formData.presenter.contact_number}
-							class="border-secondary/40 text-sm md:text-base h-auto"
-						/>
+					<div class="flex gap-2">
+						<div class="space-y-2 flex-1">
+							<Input
+								{...$constraints.presenter?.email}
+								bind:value={$formData.presenter.email}
+								class="border-secondary/40 text-sm md:text-base h-auto"
+							/>
 
-						<p class="text-[0.8rem] text-muted-foreground">
-							Contact Number
-							<span class="text-destructive">*</span>
-						</p>
-
-						{#if $errors.presenter?.contact_number}
-							<p class="text-[0.8rem] font-medium text-destructive">
-								{$errors.presenter?.contact_number}
+							<p class="text-[0.8rem] text-muted-foreground">
+								Email
+								<span class="text-destructive">*</span>
 							</p>
-						{/if}
+
+							{#if $errors.presenter?.email}
+								<p class="text-[0.8rem] font-medium text-destructive">
+									{$errors.presenter?.email}
+								</p>
+							{/if}
+						</div>
+
+						<div class="space-y-2 flex-1">
+							<Input
+								{...$constraints.presenter?.contact_number}
+								type="tel"
+								bind:value={$formData.presenter.contact_number}
+								class="border-secondary/40 text-sm md:text-base h-auto"
+							/>
+
+							<p class="text-[0.8rem] text-muted-foreground">
+								Contact Number
+								<span class="text-destructive">*</span>
+							</p>
+
+							{#if $errors.presenter?.contact_number}
+								<p class="text-[0.8rem] font-medium text-destructive">
+									{$errors.presenter?.contact_number}
+								</p>
+							{/if}
+						</div>
 					</div>
 				</div>
 
+				<Separator />
+
 				<Form.Field {form} name="paper_title">
 					<Form.Control let:attrs>
-						<Form.Label class="text-sm md:text-base">Paper Title</Form.Label>
+						<Form.Label class="text-sm md:text-base">
+							Title of Research Paper
+
+							<span class="text-destructive">*</span>
+						</Form.Label>
 						<Input
 							{...attrs}
 							class="border-secondary/40 text-sm md:text-base h-auto"
 							bind:value={$formData.paper_title}
 						/>
 					</Form.Control>
-					<Form.Description>
-						Title of your study.
-						<span class="text-destructive">*</span>
-					</Form.Description>
+					<Form.FieldErrors />
+				</Form.Field>
+
+				<Form.Field {form} name="affiliation">
+					<Form.Control let:attrs>
+						<Form.Label class="text-sm md:text-base">
+							Affiliation / School
+
+							<span class="text-destructive">*</span>
+						</Form.Label>
+						<Input
+							{...attrs}
+							class="border-secondary/40 text-sm md:text-base h-auto"
+							bind:value={$formData.affiliation}
+						/>
+					</Form.Control>
+					<Form.FieldErrors />
+				</Form.Field>
+
+				<Form.Field {form} name="payment_mode">
+					<Form.Control let:attrs>
+						<Form.Label class="text-sm md:text-base">
+							Mode of Payment
+
+							<span class="text-destructive">*</span>
+						</Form.Label>
+						<Input
+							{...attrs}
+							class="border-secondary/40 text-sm md:text-base h-auto"
+							bind:value={$formData.payment_mode}
+						/>
+					</Form.Control>
 					<Form.FieldErrors />
 				</Form.Field>
 
 				<Form.Field {form} name="receipt_image">
 					<Form.Control let:attrs>
-						<Form.Label class="text-sm md:text-base">Proof of Receipt</Form.Label>
+						<Form.Label class="text-sm md:text-base">
+							Proof of Receipt
+
+							<span class="text-destructive">*</span>
+						</Form.Label>
 						<Input
 							{...attrs}
 							on:input={inputImage}
@@ -249,10 +308,7 @@
 							class="border-secondary/40 text-sm md:text-base h-auto"
 						/>
 					</Form.Control>
-					<Form.Description
-						>Upload a screenshot of your payment receipt.
-						<span class="text-destructive">*</span>
-					</Form.Description>
+					<Form.Description>Upload a screenshot of your payment receipt.</Form.Description>
 					<Form.FieldErrors />
 				</Form.Field>
 

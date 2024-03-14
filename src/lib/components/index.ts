@@ -4,5 +4,6 @@ import Footer from './footer.svelte';
 import Header from './header.svelte';
 import EventLogo from './event-logo.svelte';
 import Timeline from './timeline.svelte';
+import Hero from './hero.svelte';
 
-export { Navbar, CallForPapers, Footer, Header, EventLogo, Timeline };
+export { Navbar, CallForPapers, Footer, Header, EventLogo, Timeline, Hero };

@@ -123,7 +123,8 @@ export const actions: Actions = {
 		// Registration entry
 		const { error: entryError } = await supabase.from('entries').insert({
 			receipt_url: receiptImageUrl,
-			paper_id: paperData.id
+			paper_id: paperData.id,
+			payment_mode: form.data.payment_mode
 		});
 
 		if (entryError) {
