@@ -8,21 +8,6 @@ function sizeInMB(sizeInBytes: number, decimals = 2): number {
 	return +result.toFixed(decimals);
 }
 
-// export const registerSchema = z.object({
-// 	email: z.string().email(),
-// 	first_name: z.string(),
-// 	last_name: z.string(),
-// 	payment_image: z
-// 		.instanceof(File, { message: 'Image is required.' })
-// 		.refine(
-// 			(f) => sizeInMB(f.size) <= MAX_IMAGE_SIZE,
-// 			`The maximum file size is ${MAX_IMAGE_SIZE} MB.`
-// 		)
-// 		.refine((file) => {
-// 			return ACCEPTED_IMAGE_TYPES.includes(file.type);
-// 		}, `Only .jpg, .jpeg, .png, .webp, and .avif files are accepted.`)
-// });
-
 export type RegisterSchema = typeof registerSchema;
 
 export const authorSchema = z.object({
@@ -32,13 +17,16 @@ export const authorSchema = z.object({
 });
 
 export const presenterSchema = authorSchema.extend({
-	contact_number: z.string()
+	contact_number: z.string(),
+	email: z.string().email()
 });
 
 export const registerSchema = z.object({
 	authors: authorSchema.array(),
 	presenter: presenterSchema,
 	paper_title: z.string(),
+	affiliation: z.string(),
+	payment_mode: z.string(),
 	receipt_image: z
 		.instanceof(File, { message: 'Image is required.' })
 		.refine(

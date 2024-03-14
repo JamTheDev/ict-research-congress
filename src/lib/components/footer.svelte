@@ -10,7 +10,7 @@
 	<div class="relative px-[5%] container">
 		<img src={computer1} alt="Computer" class="absolute -right-56 h-full z-[9] hidden md:block" />
 
-		<div class="w-2/3 flex flex-col py-20 gap-5 relative z-10">
+		<div class="w-full md:w-2/3 flex flex-col py-20 gap-5 relative z-10">
 			<h1 class="font-metropolis-bold text-2xl md:text-3xl lg:text-5xl uppercase">
 				Call for Papers
 			</h1>
@@ -25,7 +25,7 @@
 				class={buttonVariants({
 					variant: 'ghost',
 					class:
-						'text-lg px-7 w-fit uppercase h-auto bg-black rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]'
+						'text-sm md:text-base lg:text-lg px-7 w-fit uppercase h-auto bg-black rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]'
 				})}
 			>
 				Submit Your Paper
@@ -77,7 +77,7 @@
 		</div>
 
 		<div class="bg-gradient-to-b from-sky-950 to-secondary border-t-2 border-black relative z-10">
-			<div class="container py-5 px-[5%] flex gap-5">
+			<div class="container py-5 px-[5%] flex gap-5 text-sm md:text-base">
 				<span>ICT Research Congress 2024</span>
 				|
 				<a
