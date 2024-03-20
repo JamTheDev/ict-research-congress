@@ -49,30 +49,47 @@
 			Speakers
 		</h1>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 w-full">
+		<div class="flex bg-background border border-blue-900/15 rounded-xl p-6 gap-10">
+			<img
+				class="object-cover bg-blue-900/10 rounded-xl"
+				alt={SPEAKERS[0].name}
+				src={SPEAKERS[0].imageUrl}
+				loading="lazy"
+			/>
+
+			<div>
+				<h3 class="text-lg md:text-xl lg:text-2xl font-metropolis-bold">
+					{SPEAKERS[0].name}
+				</h3>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-full">
 			{#each SPEAKERS as speaker, idx (idx)}
-				<div
-					class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-col shadow-b-2xl shadow-secondary/25 p-6 w-full"
-				>
-					<div class="p-6 w-full flex justify-center">
-						<img
-							class="h-60 w-60 object-cover bg-blue-900/10 rounded-xl"
-							alt={speaker.name}
-							src={speaker.imageUrl}
-							loading="lazy"
-						/>
-					</div>
+				{#if idx > 0}
+					<div
+						class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-col shadow-b-2xl shadow-secondary/25 p-6 w-full"
+					>
+						<div class="p-6 w-full flex justify-center">
+							<img
+								class="h-60 w-60 object-cover bg-blue-900/10 rounded-xl"
+								alt={speaker.name}
+								src={speaker.imageUrl}
+								loading="lazy"
+							/>
+						</div>
 
-					<div class="flex justify-between flex-col h-full gap-2">
-						<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
-							{speaker.name}
-						</h3>
+						<div class="flex justify-between flex-col h-full gap-2">
+							<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
+								{speaker.name}
+							</h3>
 
-						<p class="text-muted-foreground text-xs md:text-sm lg:text-base">
-							{speaker.description}
-						</p>
+							<p class="text-muted-foreground text-xs md:text-sm lg:text-base">
+								{speaker.description}
+							</p>
+						</div>
 					</div>
-				</div>
+				{/if}
 			{/each}
 		</div>
 	</div>
@@ -139,15 +156,15 @@
 				this dynamic field.
 			</p>
 
-			<a
-				href="/register"
-				class={buttonVariants({
-					class:
-						'rounded-full relative uppercase text-sm md:text-base lg:text-lg w-fit px-7 py-5 z-10 hover:scale-95 transition-[background-position,transform]'
-				})}
-			>
-				Register Now
-			</a>
+			<!-- <a -->
+			<!-- 	href="/register" -->
+			<!-- 	class={buttonVariants({ -->
+			<!-- 		class: -->
+			<!-- 			'rounded-full relative uppercase text-sm md:text-base lg:text-lg w-fit px-7 py-5 z-10 hover:scale-95 transition-[background-position,transform]' -->
+			<!-- 	})} -->
+			<!-- > -->
+			<!-- 	Register Now -->
+			<!-- </a> -->
 		</div>
 
 		<div class="flex flex-row flex-wrap *:flex-1 gap-5">

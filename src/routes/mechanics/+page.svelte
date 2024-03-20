@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Header, Footer } from '$lib/components';
+	import * as Table from '$lib/components/ui/table';
 	import type { Schedule } from '$lib/types';
 
 	const SCHEDULES: Schedule[] = [
@@ -98,24 +99,101 @@
 
 <section class="px-[5%] container py-20 space-y-10">
 	<div class="space-y-4">
+		<!-- <h2 -->
+		<!-- 	class="font-metropolis-black bg-gradient-to-t from-black to-gray-200 bg-clip-text text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase text-center" -->
+		<!-- > -->
+		<!-- 	Call for Papers -->
+		<!-- </h2> -->
+
+		<p>
+			The 11th ICT Research Congress: International Edition 2024, with the Theme “Elevating
+			Information Technology and Computing Knowledge through Cutting-Edge Technology,” is NOW
+			accepting Research Papers in Computing Research, and Information and Network Security.
+		</p>
+	</div>
+
+	<div class="space-y-4">
 		<h2
 			class="font-metropolis-black bg-gradient-to-t from-black to-gray-200 bg-clip-text text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase"
 		>
-			Registration
+			Submission
 		</h2>
 
 		<p>
-			Download the template
+			Submit your full paper with the given
 			<a
 				href="/documents/2024-11th-ICT-Research-Congress-Template-Guide-for-Authors.docx"
 				class="underline text-primary font-metropolis-semibold"
 				target="_blank"
 				rel="noreferrer"
 			>
-				here
+				research template
 			</a>
 			.
 		</p>
+	</div>
+
+	<div class="space-y-4">
+		<h2
+			class="font-metropolis-black bg-gradient-to-t from-black to-gray-200 bg-clip-text text-xl md:text-2xl lg:text-4xl xl:text-5xl uppercase"
+		>
+			Payment
+		</h2>
+
+		<ol class="list-decimal">
+			<li>
+				<p>
+					The payment channel is through GCash or a bank deposit through Lank Bank of the
+					Philippines.
+				</p>
+
+				<ul class="list-disc">
+					<li>Gcash: Jernell Sanchez - 0920-972-3134</li>
+					<li>Land Bank deposit (for participants abroad):</li>
+				</ul>
+			</li>
+		</ol>
+
+		<Table.Root>
+			<Table.Caption>
+				<span class="text-destructive">*</span>
+				Additional
+				<span class="font-metropolis-bold"> Php 1,000.00 </span>
+				per copy of the proceedings.
+			</Table.Caption>
+			<Table.Header>
+				<Table.Row
+					class="[&>th]:text-sm [&>th]:md:text-base [&>th]:font-metropolis-bold [&>th]:text-foreground"
+				>
+					<Table.Head>Particulars</Table.Head>
+					<Table.Head>Foreign Participants</Table.Head>
+					<Table.Head>Local Participants</Table.Head>
+					<Table.Head>UMak Employees and Students</Table.Head>
+				</Table.Row>
+			</Table.Header>
+			<Table.Body>
+				<Table.Row class="[&>td]:text-sm [&>td]:md:text-base [&>td]:text-foreground">
+					<Table.Cell>Author-Presenter, and Co-Author/s</Table.Cell>
+					<Table.Cell>USD 30.00</Table.Cell>
+					<Table.Cell>Php 500.00</Table.Cell>
+					<Table.Cell>Free</Table.Cell>
+				</Table.Row>
+
+				<Table.Row class="[&>td]:text-sm [&>td]:md:text-base [&>td]:text-foreground">
+					<Table.Cell>Poster</Table.Cell>
+					<Table.Cell>USD 20.00</Table.Cell>
+					<Table.Cell>Php 300.00</Table.Cell>
+					<Table.Cell>Free</Table.Cell>
+				</Table.Row>
+
+				<Table.Row class="[&>td]:text-sm [&>td]:md:text-base [&>td]:text-foreground">
+					<Table.Cell>Audience-Participant only</Table.Cell>
+					<Table.Cell>USD 10.00</Table.Cell>
+					<Table.Cell>Php 200.00</Table.Cell>
+					<Table.Cell>Free</Table.Cell>
+				</Table.Row>
+			</Table.Body>
+		</Table.Root>
 	</div>
 
 	<div class="space-y-4">

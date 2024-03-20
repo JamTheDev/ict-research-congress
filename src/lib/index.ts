@@ -50,27 +50,30 @@ export const WHY_ATTEND: Array<WhyAttendData> = [
 
 export const SPEAKERS: Speaker[] = [
 	{
-		name: 'Hello World',
-		imageUrl: 'https://dudewipes.com/cdn/shop/articles/gigachad.jpg?v=1667928905&width=2048',
-		description: 'Insert short description or biography here.'
+		name: 'Dr. Mona Taman',
+		imageUrl:
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOIuKwA6snpHOOqW8vkop8vfY6YZGkigisRwIxP3x7dOAg0eKNKG4FKix7X3m6Wy1fEzE&usqp=CAU',
+		description:
+			'Deputy Chairman of the Future Leader International Group Professor of Educational Technology and E-learning, Egypt'
 	},
 	{
-		name: 'Hello World',
+		name: 'Prince C. Edike, Phd.',
 		imageUrl:
 			'https://static.wikia.nocookie.net/naruto-onepiece-fairytail/images/5/50/Roronoa_Zoro.png',
-		description: 'Insert short description or biography here.'
+		description: 'Geoscientist and Environmental Management Expert'
 	},
 	{
-		name: 'Hello World',
+		name: 'Dr. Muthmainnah',
 		imageUrl:
 			'https://wegotthiscovered.com/wp-content/uploads/2023/09/frieren-beyond-journeys-end.jpg',
-		description: 'Insert short description or biography here.'
+		description: ''
 	},
 	{
-		name: 'Hello World',
+		name: 'Dr. Francis F. Balahadia',
 		imageUrl:
 			'https://koreajoongangdaily.joins.com/data/photo/2023/04/11/0cc7763c-159d-4540-aa0c-8309c7ac7899.jpg',
-		description: 'Insert short description or biography here.'
+		description:
+			'Dean, College of Computer Studies on Laguna State Polytechnic University - Siniloan Campus'
 	}
 ];
 
@@ -95,21 +98,22 @@ export const COLLABORATORS: Collaborator[] = [
 
 export const TIMELINE: Timeline[] = [
 	{
-		date: 'Mar. 11, 2024',
+		date: 'Mar. 13, 2024',
 		description: 'Start of Paper Submission.',
 		icon: faFileCircleCheck
 	},
 
 	{
-		date: 'Apr. 7, 2024',
+		date: 'Apr. 27, 2024',
 		description: 'Deadline of Paper Submission.',
-		icon: faFileZipper
-	},
-	{
-		date: 'Apr. 28, 2024',
-		description: 'Deadline of Registration.',
+		// icon: faFileZipper,
 		icon: faClock
 	},
+	// {
+	// 	date: 'Apr. 28, 2024',
+	// 	description: 'Deadline of Registration.',
+	// 	icon: faClock
+	// },
 	{
 		date: 'May 10, 2024',
 		description: '11th ICT Research Congress.',

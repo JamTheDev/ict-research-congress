@@ -278,6 +278,7 @@
 					<Form.FieldErrors />
 				</Form.Field>
 
+				// TODO: Make this a dropdown
 				<Form.Field {form} name="payment_mode">
 					<Form.Control let:attrs>
 						<Form.Label class="text-sm md:text-base">

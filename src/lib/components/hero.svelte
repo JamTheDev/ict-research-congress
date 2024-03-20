@@ -63,7 +63,9 @@
 
 		<div class="space-x-2">
 			<a
-				href="/call-for-papers"
+				href="https://easychair.org/my/conference?conf=ictrcie2024"
+				target="_blank"
+				rel="noreferrer"
 				class={buttonVariants({
 					variant: 'ghost',
 					class:
@@ -73,16 +75,16 @@
 				Call for Papers
 			</a>
 
-			<a
-				href="/register"
-				class={buttonVariants({
-					variant: 'outline',
-					class:
-						'text-sm md:text-base lg:text-lg px-7 mt-5 uppercase h-auto rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]'
-				})}
-			>
-				Register
-			</a>
+			<!-- <a -->
+			<!-- 	href="/register" -->
+			<!-- 	class={buttonVariants({ -->
+			<!-- 		variant: 'outline', -->
+			<!-- 		class: -->
+			<!-- 			'text-sm md:text-base lg:text-lg px-7 mt-5 uppercase h-auto rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]' -->
+			<!-- 	})} -->
+			<!-- > -->
+			<!-- 	Register -->
+			<!-- </a> -->
 		</div>
 	</div>
 </section>
