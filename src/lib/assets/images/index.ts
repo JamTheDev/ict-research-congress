@@ -25,6 +25,12 @@ import RegistrationFormHeader from './Registration-Form-Header.png';
 import JamImg from './jam-img.png';
 import GioImg from './giordan-img.jpg';
 
+// NOTE: This should be in a CMS instead
+// Speakers
+import monaTaman from './mona-taman.webp';
+import muthmainnah from './muthmainnah.webp';
+import princeEdike from './prince-edike.webp';
+
 export {
 	calendar,
 	ccisLogo,
@@ -48,5 +54,8 @@ export {
 	particles2,
 	RegistrationFormHeader,
 	umakLogo,
-	UniversitasLogo
+	UniversitasLogo,
+	monaTaman,
+	muthmainnah,
+	princeEdike
 };

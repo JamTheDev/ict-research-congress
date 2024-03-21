@@ -6,7 +6,14 @@ import {
 	faGlobe
 } from '@fortawesome/free-solid-svg-icons';
 import type { Collaborator, Route, Speaker, Timeline, WhyAttendData } from './types';
-import { CURLogo, IJCSR, UniversitasLogo } from './assets/images';
+import {
+	CURLogo,
+	IJCSR,
+	UniversitasLogo,
+	monaTaman,
+	muthmainnah,
+	princeEdike
+} from './assets/images';
 
 import {
 	faHandshake,
@@ -51,29 +58,31 @@ export const WHY_ATTEND: Array<WhyAttendData> = [
 export const SPEAKERS: Speaker[] = [
 	{
 		name: 'Dr. Mona Taman',
-		imageUrl:
-			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOIuKwA6snpHOOqW8vkop8vfY6YZGkigisRwIxP3x7dOAg0eKNKG4FKix7X3m6Wy1fEzE&usqp=CAU',
+		imageUrl: monaTaman,
 		description:
-			'Deputy Chairman of the Future Leader International Group Professor of Educational Technology and E-learning, Egypt'
+			'Deputy Chairman of the Future Leader International Group Professor of Educational Technology and E-learning, Egypt',
+		email: 'monataman32@gmail.com'
 	},
 	{
 		name: 'Prince C. Edike, Phd.',
-		imageUrl:
-			'https://static.wikia.nocookie.net/naruto-onepiece-fairytail/images/5/50/Roronoa_Zoro.png',
-		description: 'Geoscientist and Environmental Management Expert'
+		imageUrl: princeEdike,
+		description: 'Geoscientist and Environmental Management Expert',
+		email: 'britprinx@gmail.com'
 	},
 	{
 		name: 'Dr. Muthmainnah',
-		imageUrl:
-			'https://wegotthiscovered.com/wp-content/uploads/2023/09/frieren-beyond-journeys-end.jpg',
-		description: ''
+		imageUrl: muthmainnah,
+		description:
+			'Assistant Professor at Universitas Al Asyariah Mandar in West Sulawesi, Indonesia',
+		email: 'muthmainnahunasman@gmail.com'
 	},
 	{
 		name: 'Dr. Francis F. Balahadia',
 		imageUrl:
 			'https://koreajoongangdaily.joins.com/data/photo/2023/04/11/0cc7763c-159d-4540-aa0c-8309c7ac7899.jpg',
 		description:
-			'Dean, College of Computer Studies on Laguna State Polytechnic University - Siniloan Campus'
+			'Dean, College of Computer Studies on Laguna State Polytechnic University - Siniloan Campus',
+		email: 'francis.balahadia@lspu.edu.ph'
 	}
 ];
 

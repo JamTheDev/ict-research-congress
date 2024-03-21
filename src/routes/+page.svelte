@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { COLLABORATORS, SPEAKERS, WHY_ATTEND } from '$lib';
+	import { COLLABORATORS, WHY_ATTEND } from '$lib';
 	import { computer2 } from '$lib/assets/images';
-	import { Footer, Hero, Timeline } from '$lib/components';
+	import { Footer, Hero, Speakers, Timeline } from '$lib/components';
 	import { buttonVariants } from '$lib/components/ui/button';
 	import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa';
@@ -41,59 +41,7 @@
 	</div>
 </section>
 
-<section class="bg-blue-50">
-	<div class="py-20 px-[5%] container flex flex-col justify-center items-center gap-20">
-		<h1
-			class="font-metropolis-black bg-gradient-to-t from-black to-gray-200 bg-clip-text text-2xl md:text-3xl lg:text-5xl xl:text-6xl uppercase"
-		>
-			Speakers
-		</h1>
-
-		<div class="flex bg-background border border-blue-900/15 rounded-xl p-6 gap-10">
-			<img
-				class="object-cover bg-blue-900/10 rounded-xl"
-				alt={SPEAKERS[0].name}
-				src={SPEAKERS[0].imageUrl}
-				loading="lazy"
-			/>
-
-			<div>
-				<h3 class="text-lg md:text-xl lg:text-2xl font-metropolis-bold">
-					{SPEAKERS[0].name}
-				</h3>
-			</div>
-		</div>
-
-		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-full">
-			{#each SPEAKERS as speaker, idx (idx)}
-				{#if idx > 0}
-					<div
-						class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-col shadow-b-2xl shadow-secondary/25 p-6 w-full"
-					>
-						<div class="p-6 w-full flex justify-center">
-							<img
-								class="h-60 w-60 object-cover bg-blue-900/10 rounded-xl"
-								alt={speaker.name}
-								src={speaker.imageUrl}
-								loading="lazy"
-							/>
-						</div>
-
-						<div class="flex justify-between flex-col h-full gap-2">
-							<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
-								{speaker.name}
-							</h3>
-
-							<p class="text-muted-foreground text-xs md:text-sm lg:text-base">
-								{speaker.description}
-							</p>
-						</div>
-					</div>
-				{/if}
-			{/each}
-		</div>
-	</div>
-</section>
+<Speakers />
 
 <section class="bg-blue-50">
 	<div class="py-20 px-[5%] container flex flex-col justify-center items-center gap-20">
