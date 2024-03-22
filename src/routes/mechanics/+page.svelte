@@ -120,7 +120,7 @@
 		</h2>
 
 		<p>
-			Submit your full paper with the given
+			Create your full paper with the given
 			<a
 				href="/documents/2024-11th-ICT-Research-Congress-Template-Guide-for-Authors.docx"
 				class="underline text-primary font-metropolis-semibold"
@@ -129,7 +129,15 @@
 			>
 				research template
 			</a>
-			.
+			and submit it through
+			<a
+				href="https://easychair.org/my/conference?conf=ictrcie2024"
+				class="underline text-primary font-metropolis-semibold"
+				target="_blank"
+				rel="noreferrer"
+			>
+				easy chair.
+			</a>
 		</p>
 	</div>
 
@@ -140,19 +148,61 @@
 			Payment
 		</h2>
 
-		<ol class="list-decimal">
-			<li>
-				<p>
-					The payment channel is through GCash or a bank deposit through Lank Bank of the
-					Philippines.
-				</p>
+		<div class="space-y-2">
+			<ol class="list-decimal pl-4 space-y-2">
+				<li>
+					<p>
+						The payment channel is through GCash or a bank deposit through Lank Bank of the
+						Philippines.
+					</p>
 
-				<ul class="list-disc">
-					<li>Gcash: Jernell Sanchez - 0920-972-3134</li>
-					<li>Land Bank deposit (for participants abroad):</li>
-				</ul>
-			</li>
-		</ol>
+					<ul class="list-disc pl-4">
+						<li>
+							<span class="font-metropolis-bold"> Gcash: </span>
+							Jernell Sanchez - 0920-972-3134
+						</li>
+						<li>
+							<span class="font-metropolis-bold">
+								Land Bank deposit (for participants abroad):
+							</span>
+							<br />
+							<div class="pl-4">
+								<p>
+									<span class="font-metropolis-medium"> Account Name: </span>
+									University of Makati Employees Multi-Purpose Cooperative
+								</p>
+
+								<p>
+									<span class="font-metropolis-semibold"> Account Number: </span>
+									2882 1013 07
+								</p>
+							</div>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					A
+					<span class="font-metropolis-bold"> picture or screenshot </span>
+					of the transaction shall be uploaded in the provided registration form for verification.
+				</li>
+
+				<li>
+					The Registration Committee
+					<span class="font-metropolis-bold"> will send a confirmation message </span>
+					of the officially registered participant through email.
+				</li>
+			</ol>
+
+			<p class="text-muted-foreground text-sm">
+				<span class="text-destructive">*</span>
+				<span class="font-metropolis-bold uppercase"> No refund </span>
+				of Research Fee in case of cancellation or non-appearance of the participant on the day of the
+				event.
+				<br />
+				Thus, requests for a refund must be made one (1) week before the closing of registration.
+			</p>
+		</div>
 
 		<Table.Root>
 			<Table.Caption>
