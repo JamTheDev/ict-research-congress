@@ -13,7 +13,7 @@
 		<div class="flex flex-row flex-wrap justify-center w-full gap-5">
 			{#each SPEAKERS as speaker, idx (idx)}
 				<div
-					class="border border-blue-900/15 rounded-xl bg-card text-card-foreground w-[23%] flex flex-col shadow-b-2xl shadow-secondary/25 "
+					class="border border-blue-900/15 rounded-xl bg-card text-card-foreground flex-1 min-w-[16rem] flex flex-col shadow-b-2xl shadow-secondary/25"
 				>
 					<div class="h-2/3">
 						<img
