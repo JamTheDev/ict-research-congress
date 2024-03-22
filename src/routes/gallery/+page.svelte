@@ -1,39 +1,23 @@
 <script lang="ts">
-	import { ictrc5th, ictrc6th, ictrc7th, ictrc8th, ictrc9th, itechy } from '$lib/assets/images';
-	import { Footer, Header } from '$lib/components';
-
-	const GALLERY = [
-		{
-			image: itechy
-		},
-		{
-			image: ictrc5th
-		},
-		{
-			image: ictrc6th
-		},
-		{
-			image: ictrc7th
-		},
-		{
-			image: ictrc8th
-		},
-		{
-			image: ictrc9th
-		}
-	];
+	import LazyImage from '$lib/components/lazy-image.svelte';
 </script>
 
-<Header title="Gallery" />
+<main class="py-[6%] px-[5%] container">
+	<h1 class="font-metropolis-black text-3xl pt-5 pb-3 text-center">
+		10th  ICT Research Congress
+	</h1>
+	<div class="w-full bg-gradient-to-l from-primary to-secondary h-1"></div>
 
-<section class="px-[5%] container py-20">
-	<div class="grid grid-cols-3 gap-4">
-		{#each GALLERY as { image }, idx (idx)}
-			<div class="w-full rounded-xl overflow-hidden">
-				<img src={image} alt="" class="object-cover w-full h-full" />
-			</div>
-		{/each}
+	<div class="flex flex-row flex-wrap w-full justify-center gap-10 *:pt-10">
+		<iframe
+			title="FB 10th ICTRC"
+			src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2FICTResearchCongress%2Fposts%2Fpfbid02uFUANGmj7LxdeuMRGb2C73xTyLydHDthyyGzdxFQaF6fVUemq6urFkU4Vp84YCQ7l&width=500&show_text=true&appId=1106036267109648&height=748"
+			width="500"
+			height="748"
+			style="border:none;overflow:hidden"
+			scrolling="no"
+			frameborder="0"
+			allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+		></iframe>
 	</div>
-</section>
-
-<Footer />
+</main>

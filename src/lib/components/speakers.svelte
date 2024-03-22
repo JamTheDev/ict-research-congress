@@ -10,51 +10,30 @@
 			Speakers
 		</h1>
 
-		<div
-			class="h-[40rem] flex w-full bg-background border border-blue-900/15 rounded-xl shadow-b-2xl shadow-secondary/25"
-		>
-			<div class="w-1/2 h-full">
-				<img
-					class="object-cover bg-blue-900/10 rounded-l-xl h-full w-full"
-					alt={SPEAKERS[0].name}
-					src={SPEAKERS[0].imageUrl}
-					loading="lazy"
-				/>
-			</div>
-
-			<div class="p-6">
-				<h3 class="text-lg md:text-xl lg:text-2xl font-metropolis-bold">
-					{SPEAKERS[0].name}
-				</h3>
-			</div>
-		</div>
-
-		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-10">
+		<div class="flex flex-row flex-wrap justify-center w-full gap-5">
 			{#each SPEAKERS as speaker, idx (idx)}
-				{#if idx > 0}
-					<div
-						class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-col shadow-b-2xl shadow-secondary/25 w-full"
-					>
-						<div class="h-2/3">
-							<img
-								class="h-full w-full object-cover bg-blue-900/10 rounded-t-xl"
-								alt={speaker.name}
-								src={speaker.imageUrl}
-								loading="lazy"
-							/>
-						</div>
-
-						<div class="h-1/3 p-6 space-y-2">
-							<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
-								{speaker.name}
-							</h3>
-
-							<p class="text-muted-foreground text-xs md:text-sm lg:text-base">
-								{speaker.description}
-							</p>
-						</div>
+				<div
+					class="border border-blue-900/15 rounded-xl bg-card text-card-foreground w-[23%] flex flex-col shadow-b-2xl shadow-secondary/25 "
+				>
+					<div class="h-2/3">
+						<img
+							class="h-full w-full object-cover bg-blue-900/10 rounded-t-xl"
+							alt={speaker.name}
+							src={speaker.imageUrl}
+							loading="lazy"
+						/>
 					</div>
-				{/if}
+
+					<div class="h-1/3 p-6 space-y-2">
+						<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
+							{speaker.name}
+						</h3>
+
+						<p class="text-muted-foreground text-xs md:text-sm lg:text-base line-clamp-6">
+							{speaker.description}
+						</p>
+					</div>
+				</div>
 			{/each}
 		</div>
 	</div>
