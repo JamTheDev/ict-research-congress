@@ -6,7 +6,15 @@ import {
 	faGlobe
 } from '@fortawesome/free-solid-svg-icons';
 import type { Collaborator, Route, Speaker, Timeline, WhyAttendData } from './types';
-import { CURLogo, IJCSR, UniversitasLogo } from './assets/images';
+import {
+	CURLogo,
+	IJCSR,
+	UniversitasLogo,
+	francis,
+	monaTaman,
+	muthmainnah,
+	princeEdike
+} from './assets/images';
 
 import {
 	faHandshake,
@@ -19,58 +27,72 @@ import {
 export const WHY_ATTEND: Array<WhyAttendData> = [
 	{
 		title: 'Networking Opportunities',
-		icon: faHandshake
+		icon: faHandshake,
+		description: "Network with like-minded people"
 	},
 
 	{
 		title: 'Unique Resource Speakers',
-		icon: faMicrophone
+		icon: faMicrophone,
+		description: "Learn from Unique Speakers"
+
 	},
 
 	{
 		title: 'Innovative Learning',
-		icon: faLightbulb
+		icon: faLightbulb,
+		description: "Innovative and Impactful Learning",
 	},
 
 	{
 		title: 'Global Reach',
-		icon: faGlobe
+		icon: faGlobe,
+		description: "International Reach of Research",
+
 	},
 
 	{
 		title: 'Impactful Researches',
-		icon: faUserGear
+		icon: faUserGear,
+		description: "Impactful Studies for CS/IT",
+
 	},
 
 	{
 		title: 'Discover new Tech',
-		icon: faWrench
+		icon: faWrench,
+		description: "Learn new Technologies",
+
 	}
 ];
 
 export const SPEAKERS: Speaker[] = [
 	{
-		name: 'Hello World',
-		imageUrl: 'https://dudewipes.com/cdn/shop/articles/gigachad.jpg?v=1667928905&width=2048',
-		description: 'Insert short description or biography here.'
+		name: 'Dr. Mona Taman',
+		imageUrl: monaTaman,
+		description:
+			'Deputy Chairman of the Future Leader International Group Professor of Educational Technology and E-learning, Egypt',
+		email: 'monataman32@gmail.com'
 	},
 	{
-		name: 'Hello World',
-		imageUrl:
-			'https://static.wikia.nocookie.net/naruto-onepiece-fairytail/images/5/50/Roronoa_Zoro.png',
-		description: 'Insert short description or biography here.'
+		name: 'Prince C. Edike, Phd.',
+		imageUrl: princeEdike,
+		description: 'Geoscientist and Environmental Management Expert',
+		email: 'britprinx@gmail.com'
 	},
 	{
-		name: 'Hello World',
-		imageUrl:
-			'https://wegotthiscovered.com/wp-content/uploads/2023/09/frieren-beyond-journeys-end.jpg',
-		description: 'Insert short description or biography here.'
+		name: 'Dr. Muthmainnah',
+		imageUrl: muthmainnah,
+		description:
+			'Assistant Professor at Universitas Al Asyariah Mandar in West Sulawesi, Indonesia',
+		email: 'muthmainnahunasman@gmail.com'
 	},
 	{
-		name: 'Hello World',
-		imageUrl:
-			'https://koreajoongangdaily.joins.com/data/photo/2023/04/11/0cc7763c-159d-4540-aa0c-8309c7ac7899.jpg',
-		description: 'Insert short description or biography here.'
+		name: 'Dr. Francis F. Balahadia',
+		imageUrl: francis,
+		description:
+			'Dean, College of Computer Studies on Laguna State Polytechnic University - Siniloan Campus',
+		email: 'francis.balahadia@lspu.edu.ph'
 	}
 ];
 
@@ -95,21 +117,22 @@ export const COLLABORATORS: Collaborator[] = [
 
 export const TIMELINE: Timeline[] = [
 	{
-		date: 'Mar. 11, 2024',
+		date: 'Mar. 13, 2024',
 		description: 'Start of Paper Submission.',
 		icon: faFileCircleCheck
 	},
 
 	{
-		date: 'Apr. 7, 2024',
+		date: 'Apr. 27, 2024',
 		description: 'Deadline of Paper Submission.',
-		icon: faFileZipper
-	},
-	{
-		date: 'Apr. 28, 2024',
-		description: 'Deadline of Registration.',
+		// icon: faFileZipper,
 		icon: faClock
 	},
+	// {
+	// 	date: 'Apr. 28, 2024',
+	// 	description: 'Deadline of Registration.',
+	// 	icon: faClock
+	// },
 	{
 		date: 'May 10, 2024',
 		description: '11th ICT Research Congress.',

@@ -15,8 +15,10 @@ export type Collaborator = {
 
 export type Speaker = {
 	name: string;
+	email?: string;
 	description?: string;
 	imageUrl?: string;
+	country?: string;
 };
 
 export type Route = {
@@ -27,6 +29,7 @@ export type Route = {
 export type WhyAttendData = {
 	title: string;
 	icon: IconDefinition;
+	description: string;
 };
 
 export type Schedule = {

@@ -21,7 +21,9 @@
 			</p>
 
 			<a
-				href="/call-for-papers"
+				href="https://easychair.org/my/conference?conf=ictrcie2024"
+				target="_blank"
+				rel="noreferrer"
 				class={buttonVariants({
 					variant: 'ghost',
 					class:
