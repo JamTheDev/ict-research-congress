@@ -30,6 +30,7 @@ import GioImg from './giordan-img.jpg';
 import monaTaman from './mona-taman.webp';
 import muthmainnah from './muthmainnah.webp';
 import princeEdike from './prince-edike.webp';
+import francis from './francis.png';
 
 export {
 	calendar,
@@ -57,5 +58,6 @@ export {
 	UniversitasLogo,
 	monaTaman,
 	muthmainnah,
-	princeEdike
+	princeEdike,
+	francis
 };

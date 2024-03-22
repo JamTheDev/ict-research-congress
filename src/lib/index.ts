@@ -10,6 +10,7 @@ import {
 	CURLogo,
 	IJCSR,
 	UniversitasLogo,
+	francis,
 	monaTaman,
 	muthmainnah,
 	princeEdike
@@ -26,32 +27,42 @@ import {
 export const WHY_ATTEND: Array<WhyAttendData> = [
 	{
 		title: 'Networking Opportunities',
-		icon: faHandshake
+		icon: faHandshake,
+		description: "Network with like-minded people"
 	},
 
 	{
 		title: 'Unique Resource Speakers',
-		icon: faMicrophone
+		icon: faMicrophone,
+		description: "Learn from Unique Speakers"
+
 	},
 
 	{
 		title: 'Innovative Learning',
-		icon: faLightbulb
+		icon: faLightbulb,
+		description: "Innovative and Impactful Learning",
 	},
 
 	{
 		title: 'Global Reach',
-		icon: faGlobe
+		icon: faGlobe,
+		description: "International Reach of Research",
+
 	},
 
 	{
 		title: 'Impactful Researches',
-		icon: faUserGear
+		icon: faUserGear,
+		description: "Impactful Studies for CS/IT",
+
 	},
 
 	{
 		title: 'Discover new Tech',
-		icon: faWrench
+		icon: faWrench,
+		description: "Learn new Technologies",
+
 	}
 ];
 
@@ -78,8 +89,7 @@ export const SPEAKERS: Speaker[] = [
 	},
 	{
 		name: 'Dr. Francis F. Balahadia',
-		imageUrl:
-			'https://koreajoongangdaily.joins.com/data/photo/2023/04/11/0cc7763c-159d-4540-aa0c-8309c7ac7899.jpg',
+		imageUrl: francis,
 		description:
 			'Dean, College of Computer Studies on Laguna State Polytechnic University - Siniloan Campus',
 		email: 'francis.balahadia@lspu.edu.ph'

@@ -132,7 +132,7 @@
 							{data.title}
 						</h3>
 
-						<p class="flex-[80%] text-sm md:text-base">Lorem ipsum very short text</p>
+						<p class="flex-[80%] text-sm md:text-base">{data.description}</p>
 					</div>
 				</div>
 			{/each}

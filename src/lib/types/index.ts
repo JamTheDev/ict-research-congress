@@ -29,6 +29,7 @@ export type Route = {
 export type WhyAttendData = {
 	title: string;
 	icon: IconDefinition;
+	description: string;
 };
 
 export type Schedule = {
