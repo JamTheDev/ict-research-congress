@@ -10,7 +10,7 @@
 	<div class="relative px-[5%] container">
 		<img src={computer1} alt="Computer" class="absolute -right-56 h-full z-[9] hidden md:block" />
 
-		<div class="w-2/3 flex flex-col py-20 gap-5 relative z-10">
+		<div class="w-full md:w-2/3 flex flex-col py-20 gap-5 relative z-10">
 			<h1 class="font-metropolis-bold text-2xl md:text-3xl lg:text-5xl uppercase">
 				Call for Papers
 			</h1>
@@ -21,11 +21,13 @@
 			</p>
 
 			<a
-				href="/call-for-papers"
+				href="https://easychair.org/my/conference?conf=ictrcie2024"
+				target="_blank"
+				rel="noreferrer"
 				class={buttonVariants({
 					variant: 'ghost',
 					class:
-						'text-lg px-7 w-fit uppercase h-auto bg-black rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]'
+						'text-sm md:text-base lg:text-lg px-7 w-fit uppercase h-auto bg-black rounded-full text-primary-foreground duration-300 hover:scale-95 transition-[transform,background-color,color]'
 				})}
 			>
 				Submit Your Paper
@@ -60,7 +62,7 @@
 			<div class="container">
 				<a
 					href="https://web.facebook.com/ICTResearchCongress"
-					class="flex items-center gap-4 mb-2"
+					class="flex items-center gap-4 mb-2 hover:brightness-75 transition-[filter] duration-300 ease-in-out"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -68,16 +70,24 @@
 					<p class="text-lg lg:text-lg font-metropolis-medium">/ ICT Research Congress</p>
 				</a>
 
-				<a href="mailto:ccis@umak.edu.ph" class="text-md font-metropolis-medium">ccis@umak.edu.ph</a
+				<a
+					href="mailto:ccis@umak.edu.ph"
+					class="text-md font-metropolis-medium hover:brightness-75 transition-[filter] duration-300 ease-in-out"
+					>ccis@umak.edu.ph</a
 				>
 			</div>
 		</div>
 
 		<div class="bg-gradient-to-b from-sky-950 to-secondary border-t-2 border-black relative z-10">
-			<div class="container py-5 px-[5%] flex gap-5">
+			<div class="container py-5 px-[5%] flex gap-5 text-sm md:text-base">
 				<span>ICT Research Congress 2024</span>
 				|
-				<a href="/devs" target="_blank">Acknowledgements</a>
+				<a
+					href="/devs"
+					target="_blank"
+					class="hover:brightness-75 transition-[filter] duration-300 ease-in-out"
+					>Acknowledgements</a
+				>
 			</div>
 		</div>
 	</div>

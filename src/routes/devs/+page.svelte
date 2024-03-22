@@ -4,7 +4,7 @@
 
 <main class="pt-28">
 	<section class=" bg-gray-100 py-10 h-[500px]">
-        <h1 class="font-metropolis-black text-4xl text-center py-5">Core Development Team</h1>
+		<h1 class="font-metropolis-black text-4xl text-center py-5">Core Development Team</h1>
 		<div class="container grid grid-cols-2 gap-10">
 			<div
 				class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-row shadow-b-2xl shadow-secondary/25 p-6"
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 
-            <div
+			<div
 				class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-row shadow-b-2xl shadow-secondary/25 p-6"
 			>
 				<div class="p-6 w-fit flex justify-center">
@@ -59,7 +59,7 @@
 						</h3>
 
 						<div>
-							<span>I - ACSAD | Batch 2023 - 2027</span>
+							<span>I - BCSAD | Batch 2023 - 2027</span>
 						</div>
 					</div>
 
