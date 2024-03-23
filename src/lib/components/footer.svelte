@@ -15,7 +15,7 @@
 				Call for Papers
 			</h1>
 
-			<p class="text-lg lg:text-xl 2xl:text-2xl font-metropolis 2xl:leading-10">
+			<p class="text-lg lg:text-xl font-metropolis lg:leading-8">
 				Do you have groundbreaking research pushing the boundaries of Information Technology? Share
 				your insights and innovations on the global stage at the UMak ICT Research Congress!
 			</p>

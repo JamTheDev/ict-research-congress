@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { Header, Footer, EventLogo } from '$lib/components';
+	import { buttonVariants } from '$lib/components/ui/button';
 	import * as Table from '$lib/components/ui/table';
 	import type { Schedule } from '$lib/types';
+	import { faCheckToSlot, faDownload } from '@fortawesome/free-solid-svg-icons';
+	import Fa from 'svelte-fa';
 
 	const SCHEDULES: Schedule[] = [
 		{
@@ -108,7 +111,7 @@
 						Submit Your Paper
 					</h2>
 					<div class="h-1 bg-gradient-to-r from-primary via-90% w-full" />
-					<p class="text-base md:text-lg lg:text-xl lg:leading-8">
+					<p class="text-base md:text-lg md:leading-8">
 						The
 						<span class="font-metropolis-semibold">
 							11th ICT Research Congress: International Edition 2024,
@@ -118,29 +121,58 @@
 							“Elevating Information Technology and Computing Knowledge through Cutting-Edge
 							Technology,”
 						</span>
-						is NOW accepting Research Papers in Computing Research, and Information and Network Security.
+						is now accepting Research Papers in Computing Research, and Information and Network Security.
 					</p>
 
-					<p class="text-base md:text-lg lg:text-xl lg:leading-8">
-						Create your full paper with the given
+					<div class="flex gap-2">
 						<a
 							href="/documents/2024-11th-ICT-Research-Congress-Template-Guide-for-Authors.docx"
-							class="underline text-primary font-metropolis-semibold"
 							target="_blank"
 							rel="noreferrer"
+							class={buttonVariants({
+								class:
+									'text-base flex gap-2  items-center md:text-lg  uppercase h-auto rounded-full px-7'
+							})}
 						>
-							research template
+							<Fa icon={faDownload} />
+							Template
 						</a>
-						and submit it through
+
 						<a
 							href="https://easychair.org/my/conference?conf=ictrcie2024"
-							class="underline text-primary font-metropolis-semibold"
 							target="_blank"
 							rel="noreferrer"
+							class={buttonVariants({
+								variant: 'ghost',
+								class:
+									'text-base flex gap-2  md:text-lg  uppercase  h-auto bg-black rounded-full text-primary-foreground px-7'
+							})}
 						>
-							easy chair.
+							<Fa icon={faCheckToSlot} />
+							Submit Paper
 						</a>
-					</p>
+					</div>
+
+					<!-- <p class="text-base md:text-lg lg:text-xl lg:leading-8"> -->
+					<!-- 	Create your full paper with the given -->
+					<!-- 	<a -->
+					<!-- 		href="/documents/2024-11th-ICT-Research-Congress-Template-Guide-for-Authors.docx" -->
+					<!-- 		class="underline text-primary font-metropolis-semibold" -->
+					<!-- 		target="_blank" -->
+					<!-- 		rel="noreferrer" -->
+					<!-- 	> -->
+					<!-- 		research template -->
+					<!-- 	</a> -->
+					<!-- 	and submit it through -->
+					<!-- 	<a -->
+					<!-- 		href="https://easychair.org/my/conference?conf=ictrcie2024" -->
+					<!-- 		class="underline text-primary font-metropolis-semibold" -->
+					<!-- 		target="_blank" -->
+					<!-- 		rel="noreferrer" -->
+					<!-- 	> -->
+					<!-- 		easy chair. -->
+					<!-- 	</a> -->
+					<!-- </p> -->
 				</div>
 
 				<div class="perspective relative w-full max-w-[40%] flex-1">
