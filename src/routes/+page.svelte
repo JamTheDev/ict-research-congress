@@ -65,7 +65,7 @@
 					</div>
 
 					<div class="flex justify-between flex-col h-full gap-4">
-						<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
+						<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-semibold">
 							{collaborator.text}
 						</h3>
 

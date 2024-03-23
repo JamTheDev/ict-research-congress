@@ -41,7 +41,7 @@
 			<!-- </span> -->
 
 			<p class="font-metropolis-black text-primary-foreground text-sm md:text-base lg:text-lg">
-				AI Horizons: Navigating the Future of Connectivity
+				Elevating Information Technology and Computing Knowledge through Cutting-Edge Technology
 			</p>
 		</div>
 

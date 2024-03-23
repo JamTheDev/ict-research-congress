@@ -25,7 +25,7 @@
 					</div>
 
 					<div class="h-1/3 p-6 space-y-2">
-						<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
+						<h3 class="text-sm md:text-base lg:text-lg font-metropolis-semibold">
 							{speaker.name}
 						</h3>
 

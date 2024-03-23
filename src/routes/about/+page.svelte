@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { ccisLogo, umakLogo } from '$lib/assets/images';
 	import { EventLogo, Footer, Header } from '$lib/components';
-	import { Button } from '$lib/components/ui/button';
+	import { Button, buttonVariants } from '$lib/components/ui/button';
 </script>
 
 <Header title="About" />
 
 <section class="container px-[5%] py-10 flex items-center flex-col gap-10">
-	<EventLogo />
+	<EventLogo class="max-w-[25%]" />
 
 	<p class="text-base lg:text-2xl font-metropolis-medium">
 		The
@@ -24,7 +24,16 @@
 		field.
 	</p>
 
-	<Button class="rounded-full text-lg h-auto px-7 uppercase">Submit Now</Button>
+	<a
+		href="https://easychair.org/my/conference?conf=ictrcie2024"
+		target="_blank"
+		rel="noreferrer"
+		class={buttonVariants({
+			class: 'text-sm md:text-base lg:text-lg px-7 h-auto rounded-full uppercase'
+		})}
+	>
+		Submit Now
+	</a>
 </section>
 
 <section class="container px-[5%] py-10 flex flex-col items-center gap-10">
