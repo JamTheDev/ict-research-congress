@@ -22,6 +22,7 @@ const config = {
 			boxShadow: {
 				'b-2xl': '0 40px 40px -40px',
 				't-section': '0 24px 38px',
+				'b-section': '0 -24px 38px',
 				'md-2': '0 4px 10px -1px rgb(0 0 0 / 0.3)'
 			},
 			spacing: {

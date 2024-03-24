@@ -12,12 +12,12 @@
 <Timeline />
 
 <section class="relative bg-gradient-to-r from-blue-900 to-secondary">
-	<div class="container px-[5%] flex items-center gap-20 w-full">
+	<div class="container flex w-full items-center gap-20 px-[5%]">
 		<!-- <div class="absolute w-full h-full scale-x-125 left-1/2 -translate-x-1/2 -z-0"></div> -->
 
-		<div class="flex-1 flex flex-col gap-3 z-10 py-10 md:py-20">
+		<div class="z-10 flex flex-1 flex-col gap-3 py-10 md:py-20">
 			<p
-				class="text-base md:text-xl lg:text-2xl text-primary-foreground leading-6 md:leading-8 lg:leading-10"
+				class="text-base leading-6 text-primary-foreground md:text-xl md:leading-8 lg:text-2xl lg:leading-10"
 			>
 				The
 				<span class="font-metropolis-bold">ICT Research Congress</span>
@@ -30,9 +30,9 @@
 			</p>
 		</div>
 
-		<div class="flex-1 hidden md:block">
+		<div class="hidden flex-1 md:block">
 			<img
-				class="relative scale-125 left-12 lg:left-48 2xl:left-24"
+				class="relative left-12 scale-125 lg:left-48 2xl:left-24"
 				src={computer2}
 				alt="Blue Computer"
 				loading="lazy"
@@ -44,19 +44,19 @@
 <Speakers />
 
 <section class="bg-blue-50">
-	<div class="py-20 px-[5%] container flex flex-col justify-center items-center gap-20">
+	<div class="container flex flex-col items-center justify-center gap-20 px-[5%] py-20">
 		<h1
-			class="font-metropolis-black bg-gradient-to-t from-black to-gray-200 bg-clip-text text-2xl md:text-3xl lg:text-5xl xl:text-6xl uppercase"
+			class="bg-gradient-to-t from-black to-gray-200 bg-clip-text font-metropolis-black text-2xl uppercase md:text-3xl lg:text-5xl xl:text-6xl"
 		>
 			In Collaboration With
 		</h1>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full">
+		<div class="grid w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
 			{#each COLLABORATORS as collaborator, idx (idx)}
 				<div
-					class="border border-blue-900/15 rounded-xl bg-card text-card-foreground h-full flex flex-col shadow-b-2xl shadow-secondary/25 p-6 w-full"
+					class="flex h-full w-full flex-col rounded-xl border border-blue-900/15 bg-card p-6 text-card-foreground shadow-b-2xl shadow-secondary/25"
 				>
-					<div class="p-6 w-full flex justify-center">
+					<div class="flex w-full justify-center p-6">
 						<img
 							class="h-60 object-cover"
 							src={collaborator.icon}
@@ -64,8 +64,8 @@
 						/>
 					</div>
 
-					<div class="flex justify-between flex-col h-full gap-4">
-						<h3 class="text-center text-sm md:text-base lg:text-lg font-metropolis-medium">
+					<div class="flex h-full flex-col justify-between gap-4">
+						<h3 class="text-center font-metropolis-semibold text-sm md:text-base lg:text-lg">
 							{collaborator.text}
 						</h3>
 
@@ -74,8 +74,7 @@
 							target="_blank"
 							rel="noreferrer"
 							class={buttonVariants({
-								class:
-									'w-fit rounded-full space-x-1 hover:scale-95 transition-[background-position,transform]'
+								class: 'w-fit space-x-1 rounded-full '
 							})}
 						>
 							<span class="font-metropolis-medium">Visit</span>
@@ -91,13 +90,13 @@
 
 <section class="shadow-t-section shadow-secondary">
 	<div
-		class="py-20 px-[5%] flex flex-col lg:flex-row justify-center items-center container gap-10 *:flex-1"
+		class="container flex flex-col items-center justify-center gap-10 px-[5%] py-20 *:flex-1 lg:flex-row"
 	>
 		<div class="flex flex-col items-start justify-start gap-5">
-			<h1 class="text-2xl md:text-4xl xl:text-5xl font-metropolis-bold">
+			<h1 class="font-metropolis-bold text-2xl md:text-4xl xl:text-5xl">
 				Why attend the ICT Research Congress?
 			</h1>
-			<div class="h-1 bg-gradient-to-r from-primary via-90% w-full" />
+			<div class="h-1 w-full bg-gradient-to-r from-primary via-90%" />
 			<p class="text-sm md:text-base">
 				Fuel your passion for ICT at the ICT Research Congress! Network with leading minds, explore
 				cutting-edge research, and shape the future of technology. Attend and ignite your career in
@@ -115,20 +114,20 @@
 			<!-- </a> -->
 		</div>
 
-		<div class="flex flex-row flex-wrap *:flex-1 gap-5">
+		<div class="flex flex-row flex-wrap gap-5 *:flex-1">
 			{#each WHY_ATTEND as data, idx (idx)}
-				<div class="flex flex-row gap-5 justify-between items-center my-5">
+				<div class="my-5 flex flex-row items-center justify-between gap-5">
 					<div
-						class="relative bg-gradient-to-b aspect-square w-fit h-20 xl:h-24 from-[#2D5C8B] to-[#021329] rounded-full"
+						class="relative aspect-square h-20 w-fit rounded-full bg-gradient-to-b from-[#2D5C8B] to-[#021329] xl:h-24"
 					>
 						<Fa
 							icon={data.icon}
-							class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-xl scale-150 text-white"
+							class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 text-xl text-white"
 						/>
 					</div>
 
-					<div class="flex flex-col w-full h-full space-y-1">
-						<h3 class="uppercase font-metropolis-bold text-xs md:text-sm w-full flex-[20%]">
+					<div class="flex h-full w-full flex-col space-y-1">
+						<h3 class="w-full flex-[20%] font-metropolis-bold text-xs uppercase md:text-sm">
 							{data.title}
 						</h3>
 

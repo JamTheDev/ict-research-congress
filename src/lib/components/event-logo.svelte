@@ -9,7 +9,7 @@
 
 <div
 	class={cn(
-		'aspect-[3/1] max-w-[25%] px-10 rounded-3xl grid place-items-center w-fit h-fit bg-gradient-to-t from-[#2D5C8B] to-[#004298]',
+		'aspect-[3/1] px-10 rounded-3xl grid place-items-center w-fit h-fit bg-gradient-to-t from-[#2D5C8B] to-[#004298]',
 		className
 	)}
 >
